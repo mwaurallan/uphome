@@ -65,7 +65,7 @@
             <li>
                 <a data-toggle="collapse" href="#inventory" {{ $section == 'inventory' ? 'aria-expanded=true' : '' }}>
                     <i class="tim-icons icon-app"></i>
-                    <span class="nav-link-text">Inventory</span>
+                    <span class="nav-link-text">Transactions</span>
                     <b class="caret mt-1"></b>
                 </a>
 
@@ -81,6 +81,12 @@
                             <a href="{{ route('products.index') }}">
                                 <i class="tim-icons icon-notes"></i>
                                 <p>Products</p>
+                            </a>
+                        </li>
+                        <li @if ($pageSlug == 'Subcounty') class="active " @endif>
+                            <a href="{{ route('subcounty.index') }}">
+                                <i class="tim-icons icon-notes"></i>
+                                <p>SubCounties</p>
                             </a>
                         </li>
                         <li @if ($pageSlug == 'categories') class="active " @endif>

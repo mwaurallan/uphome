@@ -21,7 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4b181beb-0590-40d0-8c71-17ae16a4dd7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,9 +144,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/inventory/subcounty" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\inventory\resources\views\inventory\subcounty" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -162,7 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605439462063</updated>
       <workItem from="1605439472481" duration="3007000" />
-      <workItem from="1605516297337" duration="22062000" />
+      <workItem from="1605516297337" duration="30055000" />
     </task>
     <servers />
   </component>
@@ -181,13 +187,21 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="471" y="101" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605723942491">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="471" y="101" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605723942491" />
+    <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1605717948516">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1605717948516" />
     <state x="271" y="92" width="1003" height="544" maximized="true" key="dock-window-1" timestamp="1605537872298">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="271" y="92" width="1003" height="544" maximized="true" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1605537872298" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605636108915">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605722574422">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605636108915" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605722574422" />
   </component>
 </project>
