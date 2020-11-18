@@ -1,4 +1,4 @@
-@extends('layouts.app', ['class' => 'login-page', 'page' => 'UPHOMES FUNERAL', 'contentClass' => 'login-page', 'section' => 'auth'])
+@extends('layouts.app', ['class' => 'login-page', 'page' => 'UPHOMEs FUNERAL HOME', 'contentClass' => 'login-page', 'section' => 'auth'])
 
 @section('content')
     <div class="col-lg-4 col-md-6 ml-auto mr-auto">
