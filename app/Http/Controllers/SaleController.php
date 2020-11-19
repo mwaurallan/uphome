@@ -53,7 +53,7 @@ class SaleController extends Controller
         }
 
         $sale = $model->create($request->all());
-        
+
         return redirect()
             ->route('sales.show', ['sale' => $sale->id])
             ->withStatus('Sale registered successfully, you can start registering products and transactions.');
@@ -214,4 +214,3 @@ class SaleController extends Controller
 
         return back()->withStatus('Transaction deleted successfully.');
     }
-}

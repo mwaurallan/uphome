@@ -21,8 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4b181beb-0590-40d0-8c71-17ae16a4dd7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SaleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SaleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605439462063</updated>
       <workItem from="1605439472481" duration="3007000" />
-      <workItem from="1605516297337" duration="30055000" />
+      <workItem from="1605516297337" duration="34508000" />
     </task>
     <servers />
   </component>
@@ -199,9 +200,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="271" y="92" width="1003" height="544" maximized="true" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1605537872298" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605722574422">
+    <state x="346" y="49" width="672" height="160" key="search.everywhere.popup" timestamp="1605765825556">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605722574422" />
+    <state x="346" y="49" width="672" height="160" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605765825556" />
   </component>
 </project>

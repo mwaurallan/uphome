@@ -13,6 +13,10 @@ class Product extends Model
         'name', 'description', 'product_category_id', 'price', 'stock', 'stock_defective'
     ];
 
+    public static function paginate(int $int)
+    {
+    }
+
     public function category()
     {
         return $this->belongsTo('App\ProductCategory', 'product_category_id')->withTrashed();
