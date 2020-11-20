@@ -15,6 +15,7 @@ class Product extends Model
 
     public static function paginate(int $int)
     {
+
     }
 
     public function category()

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="col-lg-4 col-md-6 ml-auto mr-auto">
-       <div class="text-lg-center"> <h1>UPHOMES FUNERAL</h1></div>
+       <div class="text-lg-center"> <h1>UPHOMES </h1></div>
         <form class="form" method="post" action="{{ route('login') }}">
             @csrf
 
