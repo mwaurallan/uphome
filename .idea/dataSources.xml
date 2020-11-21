@@ -7,7 +7,7 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://192.241.149.62 :3306/inventory</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="inventory@localhost" uuid="f8eae914-1fd3-4527-a36e-0dc03f3237f5">
+    <data-source source="LOCAL" name="inventory@localhost [2]" uuid="aa6c0e85-2f6d-469c-87bf-a6ce037a3d4e">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>

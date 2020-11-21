@@ -106,7 +106,7 @@
             </li>
 
             <li @if ($pageSlug == 'clients') class="active " @endif>
-                <a href="{{ route('clients.index') }}">
+                <a href="{{ route('admission.index') }}">
                     <i class="tim-icons icon-single-02"></i>
                     <p>Admission</p>
                 </a>

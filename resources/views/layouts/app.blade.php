@@ -19,6 +19,7 @@
         <!-- CSS -->
         <link href="{{ asset('assets') }}/css/white-dashboard.css?v=1.0.0" rel="stylesheet" />
         <link href="{{ asset('assets') }}/css/theme.css" rel="stylesheet" />
+        <link href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet" />
     </head>
     <body class="white-content {{ $class ?? '' }}">
         @auth()
@@ -49,17 +50,18 @@
             </div>
         @endauth
 
-        <script src="{{l asset('assets') }}/js/core/jquery.min.js"></script>
+        <script src="{{asset('assets/js/core/jquery.min.js') }}"></script>
         <script src="{{ asset('assets') }}/js/core/popper.min.js"></script>
         <script src="{{ asset('assets') }}/js/core/bootstrap.min.js"></script>
         <script src="{{ asset('assets') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
         <!-- Chart JS -->
         {{-- <script src="{{ asset('assets') }}/js/plugins/chartjs.min.js"></script> --}}
         <!--  Notifications Plugin    -->
-        <script src="{{ asset('assets') }}/js/plugins/bootstrap-notify.js"></script>
+        <script src="{{ asset('assets/js/plugins/bootstrap-notify.js') }}"></script>
 
         <script src="{{ asset('assets') }}/js/white-dashboard.min.js?v=1.0.0"></script>
         <script src="{{ asset('assets') }}/js/theme.js"></script>
+        <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
         <script>
             $(document).ready(function() {
                 $().ready(function() {
