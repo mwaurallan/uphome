@@ -95,7 +95,7 @@ class AdmissionController extends Controller
      //$clients=$admission->get();
        // $user = DB::table('users')->where('name', 'John')->first();
         $admins=DB::table('admissions')->where('id',$admission->id)->first();
-//     dd($admins);
+//     dd($admins->id);
         return view('uphome.show', compact('admins'));
 
     }

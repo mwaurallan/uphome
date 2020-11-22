@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Invoice</title>
+    <title>Uphomes</title>
     <style media="screen">
         body {
             font-family: 'Segoe UI','Microsoft Sans Serif',sans-serif;
@@ -24,10 +24,10 @@
         }
 
         .invoiceNbr {
-            font-size: 40px;
-            margin-right: 30px;
-            margin-top: 30px;
-            float: right;
+            font-size: 20px;
+            margin-right: 100px;
+            margin-top: 60px;
+            float:left;
         }
 
         .logo {
@@ -106,10 +106,10 @@
         }
 
         .invoiceNbr {
-            font-size: 30pt;
+            font-size: 20pt;
             margin-right: 30pt;
             margin-top: 30pt;
-            float: right;
+            float:centre;
         }
 
         .logo {
@@ -170,28 +170,30 @@
 
 </head>
 <body>
-@foreach($admins as $admin)
-    {{$admin}}
 
 
-@endforeach
+
 <header>
     <div class="logo">
         <img src="../images/genericlogo.jpg" alt="generic business logo" height="181" width="167" />
     </div>
     <div class="invoiceNbr">
-        Invoice 00014
+        UPHOME FUNERAL HOME
         <br />
-        9/1/2014
+        Clearance Form
     </div>
 </header>
 
 <div class="fromto from">
-    <div class="panel">FROM:</div>
+    <div class="panel"> Deceased Details:</div>
     <div class="fromtocontent">
-        <span>Robert Crowley</span><br />
-        <span>123 My St.</span><br />
-        <span>Portland ME, 04101</span><br />
+        @php
+        $date = \Carbon\Carbon::parse($admins->date_admitted)->format('yy-m-d');
+        @endphp
+        <span>Admission No:{{$admins->id}}</span><br />
+        <span>Name:{{$admins->name_of_deceased}}</span><br />
+        <span>Date Admited:{{$date}}</span><br />
+
     </div>
 </div>
 <div class="fromto to">
@@ -208,28 +210,21 @@
     <!-- your favorite templating/data-binding library would come in handy here to generate these rows dynamically !-->
     <div class="row">
         <div class="col-1-10 panel">
-            Date
+            Labels
         </div>
-        <div class="col-1-52 panel">
-            Description
+        <div class="col-1-30 panel">
+            Details
         </div>
-        <div class="col-1-10 panel">
-            Units
-        </div>
-        <div class="col-1-10 panel">
-            Rate
-        </div>
-        <div class="col-1-10 panel">
-            Sub Total
+
         </div>
     </div>
 
     <div class="row">
         <div class="col-1-10">
-            8/30/2014
+           Name
         </div>
         <div class="col-1-52">
-            Mares eat oats and does eat oats and little lambs eat ivy.
+            {{$admins->name}}
         </div>
         <div class="col-1-10">
             12
@@ -243,10 +238,10 @@
     </div>
     <div class="row">
         <div class="col-1-10">
-            9/1/2014
+            ID_NO
         </div>
         <div class="col-1-52">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel massa erat. Suspendisse sit amet placerat felis. Sed consequat semper leo sed ultrices. Morbi dignissim ligula vel tellus congue, ut ornare massa egestas. Nulla ut rutrum felis. Pellentesque imperdiet, mi quis mollis placerat, urna lacus porta turpis, sit amet scelerisque purus neque et libero. Etiam in rutrum purus, ac fringilla diam. Etiam sed tortor justo. Nulla est massa, cursus sed eleifend consectetur, aliquam semper ligula. Vivamus non tellus id quam semper consequat. Morbi eget euismod mi. Nulla quis blandit est. Sed eleifend massa vel nisl ornare, sed vulputate arcu dictum. Cras pulvinar eros sit amet est rutrum sollicitudin. Morbi vitae diam congue, commodo nunc vel, tristique lacus.
+            {{$admins->id_no}}
         </div>
         <div class="col-1-10">
             12
@@ -260,10 +255,44 @@
     </div>
     <div class="row">
         <div class="col-1-10">
-            9/3/2014
+            Telephone_Number
         </div>
         <div class="col-1-52">
-            Morbi eget euismod mi. Nulla quis blandit est. Sed eleifend massa vel nisl ornare, sed vulputate arcu dictum. Cras pulvinar eros sit amet est rutrum sollicitudin. Morbi vitae diam congue, commodo nunc vel, tristique lacus.
+            {{$admins->tel_no}}
+        </div>
+        <div class="col-1-10">
+            12
+        </div>
+        <div class="col-1-10">
+            25
+        </div>
+        <div class="col-1-10">
+            $300.00
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1-10">
+            Permit_Number
+        </div>
+        <div class="col-1-52">
+            {{$admins->permit_no}}
+        </div>
+        <div class="col-1-10">
+            12
+        </div>
+        <div class="col-1-10">
+            25
+        </div>
+        <div class="col-1-10">
+            $300.00
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1-10">
+          Relationship_With_Deceased
+        </div>
+        <div class="col-1-52">
+            {{$admins->relationship}}
         </div>
         <div class="col-1-10">
             12
@@ -293,5 +322,6 @@
         </div>
     </div>
 </section>
+
 </body>
 </html>
