@@ -18,7 +18,7 @@
                     @include('alerts.success')
 
                     <div class="">
-                        <table  class="table table tablesorter" id="myTable">
+                        <table  class="table table tablesorter" id="myTable" >
                             <thead class=" text-primary">
                             <tr>
 
@@ -29,6 +29,7 @@
                                 <th>Telephone</th>
                                 <th>Burial_Permit</th>
                                 <th>Date_Admitted</th>
+                                <th>Actions</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -42,6 +43,11 @@
                                         <td> {{ $client->tel_no}}</td>
                                         <td>{{$client->permit_no }}</td>
                                         <td>{{$client->date_admitted}}</td>
+                                        <td>
+                                        <a href="{{ route('admission.show', $client) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="More Details">
+                                            <i class="tim-icons icon-zoom-split"></i>
+                                        </a>
+                                        </td>
                                         <td class="td-actions text-right">
 
                                         </td>

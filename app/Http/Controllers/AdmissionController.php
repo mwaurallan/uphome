@@ -92,6 +92,24 @@ class AdmissionController extends Controller
     public function show(Admission $admission)
     {
         //
+     //$clients=$admission->get();
+       // $user = DB::table('users')->where('name', 'John')->first();
+        $admins=DB::table('admissions')->where('id',$admission->id)->first();
+//     dd($admins);
+        return view('uphome.show', compact('admins'));
+
+    }
+    public function print(Admission $client)
+    {
+        //
+        dd($client);
+
+       // $solds = $product->solds()->latest()->limit(25)->get();
+
+       // $receiveds = $product->receiveds()->latest()->limit(25)->get();
+
+        return view('uphome.show', compact('product', 'solds', 'receiveds'));
+
     }
 
     /**
