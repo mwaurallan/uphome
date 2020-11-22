@@ -24,11 +24,11 @@
 
 
                                 <th>Name</th>
-                                <th>Email / Telephone</th>
-                                <th>Balance</th>
-                                <th>Purchases</th>
-                                <th>Total Payment</th>
-                                <th>User_Id</th>
+                                <th>Name of Deceased</th>
+                                <th>ID NO</th>
+                                <th>Telephone</th>
+                                <th>Burial_Permit</th>
+                                <th>Date_Admitted</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -36,16 +36,10 @@
                                @foreach ($clients as $client)
 
                                     <tr>
-                                        <td>{{ $client->name }}--{{ $client->name_of_deceased }}-{{ $client->id_no }}</td>
-                                        <td>
-                                            <!--<a href="mailto:{{ $client->email }}">{{ $client->email }}</a>-->
-                                            <!--<br>-->
-                                            {{ $client->tel_no}}
-                                        </td>
-                                        <td>
-                                         {{$client->home_area}}
-                                        </td>
-                                        <td>{{ $client->realtionship}}</td>
+                                        <td>{{ $client->name }}</td>
+                                        <td>{{$client->name_of_deceased}}</td>
+                                        <td>{{ $client->id_no }}</td>
+                                        <td> {{ $client->tel_no}}</td>
                                         <td>{{$client->permit_no }}</td>
                                         <td>{{$client->date_admitted}}</td>
                                         <td class="td-actions text-right">
