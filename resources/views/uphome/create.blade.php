@@ -45,9 +45,9 @@
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                                     <label class="form-control-label"for="input-name">Home_Area</label>
                                     <select name="home_area" id="home_area" class="form-select form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" required>
-                                        @foreach ($cars as $car)
+                                        @foreach ($counties as $county)
 
-                                            <option value="{{$car}}" selected>{{$car}}</option>
+                                            <option value="{{$county}}" selected>{{$county}}</option>
 
                                         @endforeach
                                     </select>
@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                                     <label class="form-control-label"for="input-name">Admission_Date</label>
-                                    <input type="text" name="date_admitted" id="input-Admission Date" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name" value="{{ old('name') }}" required autofocus>
+                                    <input type="date" name="date_admitted" id="input-Admission Date" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name" value="{{ old('name') }}" required autofocus>
                                     @include('alerts.feedback', ['field' => 'date_admitted'])
                                 </div>
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
@@ -78,33 +78,44 @@
 
 
 
-                                <div class="form-group{{ $errors->has('description') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-description">Description</label>
-                                    <input type="text" name="description" id="input-description" class="form-control form-control-alternative" placeholder="Description" value="{{ old('description') }}" required>
-                                    @include('alerts.feedback', ['field' => 'description'])
-                                </div>
+
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div>
                                         <div class="form-group{{ $errors->has('stock') ? ' has-danger' : '' }}">
-                                            <label class="form-control-label" for="input-stock">Stock</label>
-                                            <input type="number" name="stock" id="input-stock" class="form-control form-control-alternative" placeholder="Stock" value="{{ old('stock') }}" required>
-                                            @include('alerts.feedback', ['field' => 'stock'])
+                                            <label class="form-control-label" for="input-stock">County</label>
+
+                                            <select name="home_area" id="home_area" class="form-select2 form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" required>
+
+                                                @foreach ($counties as $county)
+
+                                                    <option value="{{$county}}" selected>{{$county}}</option>
+
+                                                @endforeach
+                                            </select>
+                                            @include('alerts.feedback', ['field' => 'subcounty'])
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="form-group{{ $errors->has('stock_defective') ? ' has-danger' : '' }}">
-                                            <label class="form-control-label" for="input-stock_defective">Defective Stock</label>
-                                            <input type="number" name="stock_defective" id="input-stock_defective" class="form-control form-control-alternative" placeholder="Defective Stock" value="{{ old('stock_defective') }}" required>
+                                            <label class="form-control-label" for="input-stock_defective">Subcounties</label>
+                                            <select name="subcounty" id="subcounty" class="form-select3 form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" required>
+                                                @foreach ($subcounties as $subcounty)
+
+                                                    <option value="{{$subcounty}}" selected>{{$subcounty}}</option>
+
+                                                @endforeach
+                                            </select>
                                             @include('alerts.feedback', ['field' => 'stock_defective'])
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">
-                                            <label class="form-control-label" for="input-price">Price</label>
-                                            <input type="number" step=".01" name="price" id="input-price" class="form-control form-control-alternative" placeholder="Price" value="{{ old('price') }}" required>
-                                            @include('alerts.feedback', ['field' => 'price'])
+                                            <label class="form-control-label" for="input-price">Home_Area</label>
+                                            <input type="text"  name="home_area" id="home_area" class="form-control form-control-alternative" placeholder="Price" value="{{ old('home_area') }}" required>
+                                            @include('alerts.feedback', ['field' => 'home_area'])
                                         </div>
                                     </div>
+
                                 </div>
 
                                 <div class="text-center">
@@ -123,6 +134,12 @@
     <script>
         new SlimSelect({
             select: '.form-select'
+        })
+        new SlimSelect({
+            select: '.form-select2'
+        })
+        new SlimSelect({
+            select: '.form-select3'
         })
     </script>
 @endpush

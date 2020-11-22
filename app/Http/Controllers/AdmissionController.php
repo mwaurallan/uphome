@@ -42,9 +42,13 @@ class AdmissionController extends Controller
     {
         //
         $categories =ProductCategory ::all();
-        $cars= array(1 => 'NAIROBI', 2 => 'KISUMU', 3 => 'MOMBASAA');
+        $counties= array(
+        1 => 'NAIROBI', 2 => 'KISUMU', 3 => 'KIAMBU');
 
-        return view('uphome.create', compact('categories','cars'));
+        $subcounties= array(
+            1 => 'LIMURU', 2 => 'KIKUYU', 3 => 'LARI','GITHUNGURI');
+
+        return view('uphome.create', compact('categories','counties','subcounties'));
     }
 
     /**

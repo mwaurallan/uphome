@@ -42,6 +42,19 @@
                                     </select>
                                     @include('alerts.feedback', ['field' => 'payment_method_id'])
                                 </div>
+                                <div class="form-group{{ $errors->has('payment_method_id') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-method">Payment Method</label>
+                                    <select name="payment_method" id="input-status" class="form-select2 form-control-alternative{{ $errors->has('payment_method') ? ' is-invalid' : '' }}" required>
+                                        @foreach ($payment_methods as $payment_method)
+                                            @if($payment_method['id'] == old('payment_method_id'))
+                                                <option value="{{$payment_method['id']}}" selected>{{$payment_method['name']}}</option>
+                                            @else
+                                                <option value="{{$payment_method['id']}}">{{$payment_method['name']}}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
+                                    @include('alerts.feedback', ['field' => 'payment_method_id'])
+                                </div>
 
                                 <div class="form-group{{ $errors->has('amount') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-amount">Amount</label>
@@ -72,6 +85,9 @@
     <script>
         new SlimSelect({
             select: '.form-select'
+        })
+        new SlimSelect({
+            select: '.form-select2'
         })
     </script>
 @endpush('js')
