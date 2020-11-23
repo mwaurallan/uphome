@@ -44,7 +44,7 @@
                                         <td>{{$client->permit_no }}</td>
                                         <td>{{$client->date_admitted}}</td>
                                         <td>
-                                        <a href="{{ route('admission.show', $client) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="More Details">
+                                        <a href="{{ url('print/'.$client->id) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="More Details">
                                             <i class="tim-icons icon-zoom-split"></i>
                                         </a>
                                         </td>

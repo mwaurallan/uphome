@@ -180,28 +180,28 @@
     <div class="invoiceNbr">
         UPHOME FUNERAL HOME
         <br />
-        Clearance Form
+        Admission Form
     </div>
 </header>
 
 <div class="fromto from">
-    <div class="panel"> Deceased Details:</div>
+    <div class="panel"> UPHOME FUNERAL HOME</div>
     <div class="fromtocontent">
         @php
         $date = \Carbon\Carbon::parse($admins->date_admitted)->format('yy-m-d');
         @endphp
-        <span>Admission No:{{$admins->id}}</span><br />
-        <span>Name:{{$admins->name_of_deceased}}</span><br />
-        <span>Date Admited:{{$date}}</span><br />
+        <span>ADMISSION FORM</span><br />
+        <span>ADMITTED BY:{{$admins->user_name}}</span><br />
+        <span></span><br />
 
     </div>
 </div>
 <div class="fromto to">
-    <div class="panel">TO:</div>
+    <div class="panel">Deceased Details:</div>
     <div class="fromtocontent">
-        <span>Someone</span><br />
-        <span>123 Street St.</span><br />
-        <span>Portland ME, 04101</span>
+        <span>Admission No:{{$admins->id}}</span><br />
+        <span>Name:{{$admins->name_of_deceased}}</span><br />
+        <span>Date Admited:{{$date}}</span>
     </div>
 </div>
 

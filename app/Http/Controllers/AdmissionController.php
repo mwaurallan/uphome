@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Admission;
 use App\ProductCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class AdmissionController extends Controller
@@ -62,6 +63,8 @@ class AdmissionController extends Controller
         //
 //        dd($request);
         $admit = new Admission();
+       $user=Auth::user()->name;
+
 
         $admit->name_of_deceased = $request->name_of_deceased;
         $admit->name = $request->name_of_deceased;
@@ -72,6 +75,7 @@ class AdmissionController extends Controller
         $admit->date_admitted=date('y-m-d',strtotime($request->date_admitted));
         $admit->permit_no = $request->permit_no;
         $admit->relationship = $request->relationship;
+        $admit->user_name=$user;
       //  $data['birthday'] = date('Y-m-d', strtotime($data['birthday']));
 
         $admit->save();
@@ -99,17 +103,14 @@ class AdmissionController extends Controller
         return view('uphome.show', compact('admins'));
 
     }
-    public function print(Admission $client)
+    public function print( $id)
     {
         //
-        dd($client);
+       // dd($id);
+        $admins=DB::table('admissions')->where('id',$id)->first();
 
-       // $solds = $product->solds()->latest()->limit(25)->get();
-
-       // $receiveds = $product->receiveds()->latest()->limit(25)->get();
-
-        return view('uphome.show', compact('product', 'solds', 'receiveds'));
-
+//     dd($admins);
+        return view('uphome.show', compact('admins'));
     }
 
     /**
