@@ -13,5 +13,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/inventory</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="uphome@localhost" uuid="23c72385-4081-49a3-9b7b-a066597dec18">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/uphome</jdbc-url>
+    </data-source>
   </component>
 </project>

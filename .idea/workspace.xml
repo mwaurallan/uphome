@@ -20,11 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b181beb-0590-40d0-8c71-17ae16a4dd7e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/aa6c0e85-2f6d-469c-87bf-a6ce037a3d4e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/aa6c0e85-2f6d-469c-87bf-a6ce037a3d4e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/913ee49f-eb08-44f1-ae36-33e7e80798d2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/913ee49f-eb08-44f1-ae36-33e7e80798d2/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8eae914-1fd3-4527-a36e-0dc03f3237f5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8eae914-1fd3-4527-a36e-0dc03f3237f5/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdmissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdmissionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/uphome/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/uphome/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/uphome/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/uphome/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,12 +151,14 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/payments" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\uphome\resources\views\payments" />
+      <recent name="C:\xampp\htdocs\uphome\database\migrations" />
       <recent name="C:\xampp\htdocs\inventory\resources\views\uphome" />
       <recent name="C:\xampp\htdocs\inventory\resources\views\inventory\subcounty" />
     </key>
@@ -175,6 +180,7 @@
       <workItem from="1605439472481" duration="3007000" />
       <workItem from="1605516297337" duration="40151000" />
       <workItem from="1605811641787" duration="52339000" />
+      <workItem from="1606243328177" duration="69038000" />
     </task>
     <servers />
   </component>
@@ -194,34 +200,34 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605946476446">
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606315319005">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1605946476445" />
-    <state x="471" y="101" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605969017772">
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1606315319005" />
+    <state x="471" y="101" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606398660773">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="471" y="101" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605969017772" />
-    <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1606049559525">
+    <state x="471" y="101" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606398660773" />
+    <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1606315481698">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606049559525" />
-    <state width="879" height="208" key="GridCell.Tab.0.bottom" timestamp="1605976454994">
+    <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606315481698" />
+    <state width="905" height="17" key="GridCell.Tab.0.bottom" timestamp="1606564860050">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="879" height="208" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605976454994" />
-    <state width="879" height="208" key="GridCell.Tab.0.center" timestamp="1605976454994">
+    <state width="905" height="17" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606564860050" />
+    <state width="905" height="17" key="GridCell.Tab.0.center" timestamp="1606564860049">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="879" height="208" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1605976454994" />
-    <state width="879" height="208" key="GridCell.Tab.0.left" timestamp="1605976454994">
+    <state width="905" height="17" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606564860049" />
+    <state width="905" height="17" key="GridCell.Tab.0.left" timestamp="1606564860035">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="879" height="208" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1605976454994" />
-    <state width="879" height="208" key="GridCell.Tab.0.right" timestamp="1605976454994">
+    <state width="905" height="17" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606564860035" />
+    <state width="905" height="17" key="GridCell.Tab.0.right" timestamp="1606564860049">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="879" height="208" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1605976454994" />
+    <state width="905" height="17" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606564860049" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1605946226396">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -230,13 +236,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="271" y="92" width="1003" height="544" maximized="true" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1605537872298" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1606065775806">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1606498567253">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606065775806" />
-    <state x="346" y="49" width="672" height="160" key="search.everywhere.popup" timestamp="1606116763118">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606498567253" />
+    <state x="346" y="49" width="672" height="160" key="search.everywhere.popup" timestamp="1606666051407">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="160" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606116763118" />
+    <state x="346" y="49" width="672" height="160" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606666051407" />
   </component>
 </project>
