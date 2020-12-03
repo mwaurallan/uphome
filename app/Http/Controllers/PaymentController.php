@@ -52,14 +52,7 @@ class PaymentController extends Controller
     }
     public function display($id)
     {
-        //
 
-        $admins=DB::table('admissions')->where('id',$id)->first();
-        dd($admins);
-
-
-//     dd($admins);
-        return view('pay.create', compact('admins'));
     }
 
     /**
@@ -91,22 +84,40 @@ class PaymentController extends Controller
         else
         {
           $bal=$bills->bill_balance-$request->amount_paid;
-//          dd($bal);
+
         }
-//      dd($bal);
+
 
         $affected = DB::table('bills')
             ->where('id', $request->order_id)
             ->update(['amount_paid' =>$request->amount_paid +$current,'bill_balance'=>$bal]);
 
         // $model->create($request->all());
-
-        return redirect()
-            ->route('admission.index')
-            ->withStatus('Admission successfully registered.');
+       $pay=Payment::latest()->first();
+        $id=$pay->id;
 
 
 
+        return redirect("print3/{$id}");
+
+
+    }
+    public function receipt($id)
+    {
+        $bills =DB::table('payments')
+                  ->where('id',$id)->get();
+//        dd($payments->order_id);
+      $client_id=$bills[0]->customer_id;
+      $order_id=$bills[0]->order_id;
+//      dd($order_id);
+        $clients=DB::table('admissions')->where('id',$client_id)->first();
+//        $orders=DB::table('bills')->where('id',$order_id)->first();
+        $orders =DB::table('bill__services')
+            ->join('services', 'services.id', '=', 'bill__services.product_id')
+            ->select('bill__services.*', 'services.name')
+            ->where('bill__services.order_id',$order_id)->get();
+//        dd($orders);
+        return view('pay.receipt', compact('bills','clients','orders'));
     }
 
     /**

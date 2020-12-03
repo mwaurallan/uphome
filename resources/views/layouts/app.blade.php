@@ -21,6 +21,42 @@
         <link href="{{ asset('assets') }}/css/theme.css" rel="stylesheet" />
         <link href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+        <head>
+            <style>
+                .center {
+                    margin: auto;
+                    width: 60%;
+                    border: 3px solid #73AD21;
+                    padding: 10px;
+                    text-align: center;
+                }
+                .center2 {
+                    margin: auto;
+                    width: 60%;
+                    border: 1px solid #73AD21;
+                    padding: 10px;
+                    text-align: center;
+                }
+                .right {
+                    position: absolute;
+                    right: 10px;
+                    width: 300px;
+                    padding: 0px;
+                }
+                .right2 {
+                    position: absolute;
+                    right: 0px;
+                    width: 300px;
+                    padding:1px;
+                    margin-top: 10px;
+                }
+                @media print {
+                    #print {
+                        display: none;
+                    }
+                }
+            </style>
+
 
     </head>
     <body class="white-content {{ $class ?? '' }}">
