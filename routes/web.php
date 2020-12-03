@@ -27,6 +27,7 @@ Route::group(['middleware' => 'auth'], function () {
         'inventory/subcounty'=>'SubCountyController',
         'clients' => 'ClientController',
         'payments'=>'Order2Controller',
+        'pay'=>'PaymentController',
         'services'=>'BillController',
         'admission'=>'AdmissionController',
         'inventory/categories' => 'ProductCategoryController',
@@ -37,6 +38,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('transactions', 'TransactionController')->except(['create', 'show']);
     Route::get('transactions/stats/{year?}/{month?}/{day?}', ['as' => 'transactions.stats', 'uses' => 'TransactionController@stats']);
     Route::get('print/{id}',"AdmissionController@print");
+    Route::get('print2/{id}',"PaymentController@print");
+    Route::get('pay/{id}',"PaymentController@display");
     Route::get('transactions/{type}', ['as' => 'transactions.type', 'uses' => 'TransactionController@type']);
     Route::get('transactions/{type}/create', ['as' => 'transactions.create', 'uses' => 'TransactionController@create']);
     Route::get('transactions/{transaction}/edit', ['as' => 'transactions.edit', 'uses' => 'TransactionController@edit']);

@@ -25,7 +25,10 @@
 
                                 <th>Bill_ID</th>
                                 <th>Name</th>
-                                <th>Client_ID</th>
+                                <th>Deceased</th>
+                                <th>Bill_Total</th>
+                                <th>Amount_Paid</th>
+                                <th>Balance</th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
@@ -39,15 +42,18 @@
 
                                     <tr>
                                         <td>{{ $bill->id }}</td>
-                                        <td>{{$bill->customer_name}}</td>
-                                        <td>{{ $bill->customer_email}}</td>
+                                        <td>{{$bill->name}}</td>
+                                        <td>{{$bill->name_of_deceased}}</td>
+                                        <td>{{$bill->bill_total}}</td>
+                                        <td>{{$bill->amount_paid}}</td>
+                                        <td>{{$bill->bill_balance}}</td>
                                         <td> </td>
                                         <td></td>
                                         <td></td>
                                         <td>
-                                        <a href="{{ url('print/'.$bill->id) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="More Details">
-                                            <i class="tim-icons icon-zoom-split"></i>
-                                        </a>
+                                            <a href="{{ url('print2/'.$bill->id) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="More Details">
+                                                <i class="tim-icons icon-zoom-split"></i>
+                                            </a>
                                         </td>
                                         <td class="td-actions text-right">
 

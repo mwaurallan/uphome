@@ -17,4 +17,8 @@ class Admission extends Model
         'permit_no',
         'relationship',
     ];
+    public function payments()
+    {
+        return $this->hasMany('App\Payment');
+    }
 }

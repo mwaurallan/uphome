@@ -7,28 +7,28 @@
                 <div class="card-header ">
                     <div class="row">
                         <div class="col-sm-6 text-left">
-                            <h5 class="card-category">Total sales</h5>
-                            <h2 class="card-title">Annual yield</h2>
+                            <h5 class="card-category">Total Admissions</h5>
+                            <h2 class="card-title">Annual Statistics</h2>
                         </div>
                         <div class="col-sm-6">
                             <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
                             <label class="btn btn-sm btn-primary btn-simple active" id="0">
                                 <input type="radio" name="options" checked>
-                                <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Products</span>
+                                <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Admissions</span>
                                 <span class="d-block d-sm-none">
                                     <i class="tim-icons icon-single-02"></i>
                                 </span>
                             </label>
                             <label class="btn btn-sm btn-primary btn-simple" id="1">
                                 <input type="radio" class="d-none d-sm-none" name="options">
-                                <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Purchases</span>
+                                <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Services</span>
                                 <span class="d-block d-sm-none">
                                     <i class="tim-icons icon-gift-2"></i>
                                 </span>
                             </label>
                             <label class="btn btn-sm btn-primary btn-simple" id="2">
                                 <input type="radio" class="d-none" name="options">
-                                <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Clients</span>
+                                <span class="d-none d-sm-block d-md-block d-lg-block d-xl-block">Clearance</span>
                                 <span class="d-block d-sm-none">
                                     <i class="tim-icons icon-tap-02"></i>
                                 </span>
@@ -50,7 +50,7 @@
         <div class="col-lg-4">
             <div class="card card-chart">
                 <div class="card-header">
-                    <h5 class="card-category">Last Month Income</h5>
+                    <h5 class="card-category">Last Month Admissions</h5>
                     <h3 class="card-title"><i class="tim-icons icon-money-coins text-primary"></i>{{ format_money($semesterincomes) }}</h3>
                 </div>
                 <div class="card-body">
@@ -186,7 +186,7 @@
                             <tbody>
 
                                 @foreach($lasttransactions as $transaction)
-                                    <tr> 
+                                    <tr>
                                         <td>
                                             @if($transaction->type == 'expense')
                                                 Expense
@@ -199,7 +199,7 @@
                                             @else
                                                 {{ $transaction->type }}
                                             @endif
-                                            
+
                                         </td>
                                         <td>{{ $transaction->title }}</td>
                                         <td>{{ $transaction->method->name }}</td>
@@ -246,7 +246,7 @@
 
 @push('js')
     <script src="{{ asset('assets/js/plugins/chartjs.min.js') }}"></script>
-    
+
     <script>
         var lastmonths = [];
 

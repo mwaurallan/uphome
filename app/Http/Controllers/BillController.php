@@ -22,7 +22,12 @@ class BillController extends Controller
         $products =Service::all();
         $clients=Admission::all();
         $bills=Bill::all();
-        //dd($bills);
+        $bills =DB::table('bills')
+            ->join('admissions', 'admissions.id', '=', 'bills.customer_email')
+            ->select('bills.*', 'admissions.name','admissions.name_of_deceased')
+            ->orderBy('id', 'desc')->get();
+
+//        dd($bills);
 
         return view('payments.index', compact('products','bills'));
     }
@@ -51,7 +56,7 @@ class BillController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->customer_name);
+//        dd($request->bill_total);
         $id=$request->customer_name;
         $client = DB::table('admissions')->where('id', $id)->first();
        $name=$client->name;
@@ -64,6 +69,7 @@ class BillController extends Controller
          Bill::create([
              'customer_name'=>$name,
              'customer_email'=>$id2,
+             'bill_total'=>$request->bill_total,
              ]);
 
         $id2=Bill::latest()->first();

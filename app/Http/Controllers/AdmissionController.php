@@ -67,7 +67,7 @@ class AdmissionController extends Controller
 
 
         $admit->name_of_deceased = $request->name_of_deceased;
-        $admit->name = $request->name_of_deceased;
+        $admit->name = $request->name;
         $admit->id_no= $request->id_no;
         $admit->home_area = $request->home_area;
         $admit->tel_no = $request->tel_no;

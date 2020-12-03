@@ -5,45 +5,73 @@
        <div class="card-header">
            <div class="row">
                <div class="col-8">
-                   <h4 class="card-title">Create Bills</h4>
+                   <h4 class="card-title">Pay Bill</h4>
                </div>
                <div class="col-4 text-right">
                    <a href="{{ route('services.index') }}" class="btn btn-sm btn-primary">All Bills</a>
                </div>
            </div>
        </div>
-       <form action="{{ route("services.store") }}" method="POST">
+       <form action="{{ route("pay.store") }}" method="POST">
            @csrf
 
-           <div class="form-group {{ $errors->has('customer_name') ? 'has-error' : '' }}">
-               Customer name
-               <select name="customer_name"  class="form-select form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" required>
-                   @foreach ($clients as $client)
 
-                       <option value="{{$client->id}}" selected>{{$client->name}}</option>
-
-                   @endforeach
-               </select>
-
-               @include('alerts.feedback', ['field' => 'home_area'])
-           </div>
            <div class="form-group {{ $errors->has('customer_email') ? 'has-error' : '' }}">
-               Customer email
-               <input type="hidden" name="customer_email" class="form-control"
-                      value="{{ old('customer_email') }}">
-               @if($errors->has('customer_email'))
+               Clients Name
+               <input type="text" name="customer_email" class="form-control"
+                      value="{{$admins->customer_name}}">
+               @if($errors->has('customer_name'))
                    <em class="invalid-feedback">
                        {{ $errors->first('customer_email') }}
+                   </em>
+               @endif
+           </div>
+           <div class="form-group {{ $errors->has('customer_email') ? 'has-error' : '' }}">
+               <input type="hidden" name="customer_email" class="form-control"
+                      value="{{$admins->customer_email}}">
+               @if($errors->has('customer_name'))
+                   <em class="invalid-feedback">
+                       {{ $errors->first('customer_email') }}
+                   </em>
+               @endif
+           </div>
+           <div class="form-group {{ $errors->has('order_id') ? 'has-error' : '' }}">
+
+               <input type="hidden" name="order_id" class="form-control"
+                      value="{{$admins->id}}">
+               @if($errors->has('order_id'))
+                   <em class="invalid-feedback">
+                       {{ $errors->first('order_id') }}
+                   </em>
+               @endif
+           </div>
+
+           <div class="form-group {{ $errors->has('payment_date') ? 'has-error' : '' }}">
+               Date Paid
+               <input type="text" name="payment_date" id="dato" class="form-control" value="@php echo date('d-m-Y'); @endphp"/>
+               @if($errors->has('payment_date'))
+                   <em class="invalid-feedback">
+                       {{ $errors->first('order_id') }}
                    </em>
                @endif
            </div>
            <div class="form-group {{ $errors->has('bill_total') ? 'has-error' : '' }}">
                Total Bill
                <input type="text" name="bill_total" class="form-control"
-                      value="{{ old('bill_total') }}">
+                      value="{{ $admins->bill_total }}">
                @if($errors->has('bill_total'))
                    <em class="invalid-feedback">
                        {{ $errors->first('bill_total')}}
+                   </em>
+               @endif
+           </div>
+           <div class="form-group {{ $errors->has('amount_paid') ? 'has-error' : '' }}">
+               Amount Paid
+               <input type="text" name="amount_paid" class="form-control"
+                      value="1">
+               @if($errors->has('amount_paid'))
+                   <em class="invalid-feedback">
+                       {{ $errors->first('amount_paid') }}
                    </em>
                @endif
            </div>
@@ -51,34 +79,27 @@
 
            <div class="card">
                <div class="card-header">
-                   Products
+              Services
                </div>
 
                <div class="card-body">
                    <table class="table" id="products_table">
                        <thead>
                        <tr>
-                           <th>Product</th>
-                           <th>Quantity</th>
+                           <th>Services</th>
+                           <th>Amount</th>
                        </tr>
                        </thead>
                        <tbody>
-                       <tr id="product0">
-                           <td>
-                               <select name="products[]" class="form-control">
-                                   <option value="">-- choose product --</option>
-                                   @foreach ($products as $product)
-                                       <option value="{{ $product->id }}">
-                                           {{ $product->name }} (Ksh{{ number_format($product->price, 2) }})
-                                       </option>
-                                   @endforeach
-                               </select>
-                           </td>
 
-                           <td>
-                               <input type="number" id="qty" name="quantities[]" class="form-control" value="1" />
-                           </td>
-                       </tr>
+
+                           @foreach ($bills as $bill)
+
+                                 <tr><td>{{$bill->name}}</td><td>{{$bill->quantity}}</td></tr>
+
+
+                           @endforeach
+
                        <tr id="product1"></tr>
 
                        </tbody>
@@ -87,16 +108,12 @@
 
 
                    <div class="row">
-                       <div class="col-md-12">
-                           <button id="add_row" class="btn btn-default pull-left">+ Add Row</button>
-
-                           <button id='delete_row' class="pull-right btn btn-danger">- Delete Row</button>
-                       </div>
+                       <input class="btn btn-danger" type="submit">
                    </div>
                </div>
            </div>
            <div>
-               <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
+
            </div>
        </form>
    </div>
@@ -132,8 +149,6 @@
                     row_number--;
                 }
             });
-
-
     });
     </script>
     <script>
@@ -152,5 +167,11 @@
         });
     </script>
 
-
+<script>
+    $(document).ready(function(){
+        $("#dato").datepicker({
+            format: "dd-M-yyyy"
+        });
+    });
+</script>
 @endpush

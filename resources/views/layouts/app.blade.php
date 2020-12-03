@@ -20,6 +20,8 @@
         <link href="{{ asset('assets') }}/css/white-dashboard.css?v=1.0.0" rel="stylesheet" />
         <link href="{{ asset('assets') }}/css/theme.css" rel="stylesheet" />
         <link href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
     </head>
     <body class="white-content {{ $class ?? '' }}">
         @auth()
@@ -51,6 +53,7 @@
         @endauth
 
         <script src="{{asset('assets/js/core/jquery.min.js') }}"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="{{ asset('assets') }}/js/core/popper.min.js"></script>
         <script src="{{ asset('assets') }}/js/core/bootstrap.min.js"></script>
         <script src="{{ asset('assets') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
