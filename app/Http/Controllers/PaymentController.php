@@ -41,15 +41,7 @@ class PaymentController extends Controller
         //
 
         $admins=DB::table('bills')->where('id',$id)->first();
-//       dd($admins);
-       // $bills=DB::table('bill__services')->where('order_id',$id)->get();
-//     //   $bills=Bill_Service::select('bill__services.*')->where('order_id',$id)
-//        //    ->join('services','services.id','=','product_id')->get();
-//        dd($bills);
-//        $admins=Bill::select('bills.*')
-//            ->join('bill__services','bill__services.order_id','=','bills.id')
-//            ->join('services','services.id','=','bill__services.product_id')
-//            ->where('bills.id',$id)->get();
+//        dd($admins);
         $bills =DB::table('bill__services')
             ->join('services', 'services.id', '=', 'bill__services.product_id')
             ->select('bill__services.*', 'services.name')
@@ -92,13 +84,13 @@ class PaymentController extends Controller
 
         $bills =DB::table('bills')->where('id',$request->order_id)->first();
         $current=$bills->amount_paid;
-        if($request->amount_paid == $bills->bill_total)
+        if($request->amount_paid == $bills->bill_balance)
         {
-            $bal=$bills->bill_total-$request->amount_paid;
+            $bal=$bills->bill_balance-$request->amount_paid;
         }
         else
         {
-          $bal=$bills->bill_total-$request->amount_paid;
+          $bal=$bills->bill_balance-$request->amount_paid;
 //          dd($bal);
         }
 //      dd($bal);

@@ -70,6 +70,7 @@ class BillController extends Controller
              'customer_name'=>$name,
              'customer_email'=>$id2,
              'bill_total'=>$request->bill_total,
+             'bill_balance'=>$request->bill_total,
              ]);
 
         $id2=Bill::latest()->first();
