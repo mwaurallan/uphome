@@ -106,18 +106,20 @@ class PaymentController extends Controller
     {
         $bills =DB::table('payments')
                   ->where('id',$id)->get();
-//        dd($payments->order_id);
+//        dd($bills);
       $client_id=$bills[0]->customer_id;
       $order_id=$bills[0]->order_id;
 //      dd($order_id);
         $clients=DB::table('admissions')->where('id',$client_id)->first();
-//        $orders=DB::table('bills')->where('id',$order_id)->first();
+//        dd($clients);
+        $pays=DB::table('bills')->where('id',$order_id)->first();
+//        dd($pays);
         $orders =DB::table('bill__services')
             ->join('services', 'services.id', '=', 'bill__services.product_id')
             ->select('bill__services.*', 'services.name')
             ->where('bill__services.order_id',$order_id)->get();
 //        dd($orders);
-        return view('pay.receipt', compact('bills','clients','orders'));
+        return view('pay.receipt', compact('bills','clients','orders','pays'));
     }
 
     /**

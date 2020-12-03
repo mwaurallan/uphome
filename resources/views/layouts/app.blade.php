@@ -33,7 +33,6 @@
                 .center2 {
                     margin: auto;
                     width: 60%;
-                    border: 1px solid #73AD21;
                     padding: 10px;
                     text-align: center;
                 }

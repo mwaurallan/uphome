@@ -11,32 +11,30 @@
                    <div class="center2">
                        <p>UPHOME FUNERAL HOME</p>
                        <p>Official Receipt</p>
-                   </div>
-                   <div class="right">
                        <P>Tel:0798439434934</P>
                        <p>Email:info@uphome.com</p>
                    </div>
+
                </div>
 
 
                <div class="card-body">
                    <table class="table" id="products_table">
                        <thead>
-
+            <p>Received From:{{$clients->name}} ---Name Of Deceased:{{$clients->name_of_deceased}}</p>
+                       <p>Payment Date--{{$bills[0]->payment_date}}</p>
+                        <p>Bill_Total --{{$pays->bill_total}}--Amount_Paid--{{$bills[0]->amount_paid}}--Balance--{{$pays->bill_balance}}</p>
+                        <p></p>
                        </thead>
 
                        <tbody>
-
+                    <h1>Services</h1>
                        <tr>
-                           <td><p>hfjkdhfjkdhfkhdlfd
-                               dfhdlfhdljfldjf
-                               wfkjsdklfhkldfjklsdjfsklfvsd
-                               dfkjsdklfhkldsjfkldjfkld
-                               asfknhsaklfhasdklfjksdjf;sd
-                               askjfksdjfd;kasjfdklhfsd
-                               dkfjsdklfhsdklfhdklf;d
-                               sfkhsdj;kfhsd;kfjd;kf
-                               asskdfhasklfhkl</p></td>
+
+                       </tr>
+                       <tr>
+
+
                        </tr>
                        <tr>
                            <th>Services</th>
