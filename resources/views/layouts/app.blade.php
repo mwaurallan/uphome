@@ -54,6 +54,16 @@
                         display: none;
                     }
                 }
+                input {
+                    border-top-style: hidden;
+                    border-right-style: hidden;
+                    border-left-style: hidden;
+                    border-bottom-style: groove;
+                    background-color: #eee;
+                }
+                .no-outline:focus {
+                    outline: none;
+                }
             </style>
 
 

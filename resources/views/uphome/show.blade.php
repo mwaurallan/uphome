@@ -1,327 +1,71 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Uphomes</title>
-    <style media="screen">
-        body {
-            font-family: 'Segoe UI','Microsoft Sans Serif',sans-serif;
-        }
+@extends('layouts.app', ['page' => __('User Profile'), 'pageSlug' => 'profile', 'section' => 'users'])
 
-        /*
-            These next two styles are apparently the modern way to clear a float. This allows the logo
-            and the word "Invoice" to remain above the From and To sections. Inserting an empty div
-            between them with clear:both also works but is bad style.
-            Reference:
-            http://stackoverflow.com/questions/490184/what-is-the-best-way-to-clear-the-css-style-float
-        */
-        header:before, header:after {
-            content: " ";
-            display: table;
-        }
+@section('content')
 
-        header:after {
-            clear: both;
-        }
-
-        .invoiceNbr {
-            font-size: 20px;
-            margin-right: 100px;
-            margin-top: 60px;
-            float:left;
-        }
-
-        .logo {
-            float: left;
-        }
-
-        .from {
-            float: left;
-        }
-
-        .to {
-            float: right;
-        }
-
-        .fromto {
-            border-style: solid;
-            border-width: 1px;
-            border-color: #e8e5e5;
-            border-radius: 5px;
-            margin: 20px;
-            min-width: 200px;
-        }
-
-        .fromtocontent {
-            margin: 10px;
-            margin-right: 15px;
-        }
-
-        .panel {
-            background-color: #e8e5e5;
-            padding: 7px;
-        }
-
-        .items {
-            clear: both;
-            display: table;
-            padding: 20px;
-        }
-
-        /* Factor out common styles for all of the "col-" classes.*/
-        div[class^="col-"] {
-            display: table-cell;
-            padding: 7px;
-        }
-
-        /*for clarity name column styles by the percentage of width */
-        .col-1-10 {
-            width: 10%;
-        }
-
-        .col-1-52 {
-            width: 52%;
-        }
-
-        .row {
-            display: table-row;
-            page-break-inside: avoid;
-        }
-
-    </style>
-
-    <!-- These styles are exactly like the screen styles except they use points (pt) as units
-        of measure instead of pixels (px) -->
-    <style media="print">
-        body {
-            font-family: 'Segoe UI','Microsoft Sans Serif',sans-serif;
-        }
-
-        header:before, header:after {
-            content: " ";
-            display: table;
-        }
-
-        header:after {
-            clear: both;
-        }
-
-        .invoiceNbr {
-            font-size: 20pt;
-            margin-right: 30pt;
-            margin-top: 30pt;
-            float:centre;
-        }
-
-        .logo {
-            float: left;
-        }
-
-        .from {
-            float: left;
-        }
-
-        .to {
-            float: right;
-        }
-
-        .fromto {
-            border-style: solid;
-            border-width: 1pt;
-            border-color: #e8e5e5;
-            border-radius: 5pt;
-            margin: 20pt;
-            min-width: 200pt;
-        }
-
-        .fromtocontent {
-            margin: 10pt;
-            margin-right: 15pt;
-        }
-
-        .panel {
-            background-color: #e8e5e5;
-            padding: 7pt;
-        }
-
-        .items {
-            clear: both;
-            display: table;
-            padding: 20pt;
-        }
-
-        div[class^="col-"] {
-            display: table-cell;
-            padding: 7pt;
-        }
-
-        .col-1-10 {
-            width: 10%;
-        }
-
-        .col-1-52 {
-            width: 52%;
-        }
-
-        .row {
-            display: table-row;
-            page-break-inside: avoid;
-        }
-    </style>
-
-</head>
-<body>
-
-
-
-<header>
-    <div class="logo">
-        <img src="../images/genericlogo.jpg" alt="generic business logo" height="181" width="167" />
-    </div>
-    <div class="invoiceNbr">
-        UPHOME FUNERAL HOME
-        <br />
-        Admission Form
-    </div>
-</header>
-
-<div class="fromto from">
-    <div class="panel"> UPHOME FUNERAL HOME</div>
-    <div class="fromtocontent">
-        @php
-        $date = \Carbon\Carbon::parse($admins->date_admitted)->format('yy-m-d');
-        @endphp
-        <span>ADMISSION FORM</span><br />
-        <span>ADMITTED BY:{{$admins->user_name}}</span><br />
-        <span></span><br />
-
-    </div>
-</div>
-<div class="fromto to">
-    <div class="panel">Deceased Details:</div>
-    <div class="fromtocontent">
-        <span>Admission No:{{$admins->id}}</span><br />
-        <span>Name:{{$admins->name_of_deceased}}</span><br />
-        <span>Date Admited:{{$date}}</span>
-    </div>
-</div>
-
-<section class="items">
-
-    <!-- your favorite templating/data-binding library would come in handy here to generate these rows dynamically !-->
+    <div id="body">
     <div class="row">
-        <div class="col-1-10 panel">
-            Labels
-        </div>
-        <div class="col-1-30 panel">
-            Details
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="title">Edit Profile</h5>
+                </div>
+                <form method="post" action="{{ route('profile.update') }}" autocomplete="off">
+                    <div class="card-body">
+                        @csrf
+                        @method('put')
+
+                        @include('alerts.success')
+
+                        <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
+                            <label>Name</label>
+                            <input type="text" name="name" class="no-outline" placeholder="Name" value="{{ old('name', auth()->user()->name) }}">
+                            @include('alerts.feedback', ['field' => 'name'])
+                        </div>
+
+                        <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
+                            <label>Email</label>
+                            <input type="email" name="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="Email" value="{{ old('email', auth()->user()->email) }}">
+                            @include('alerts.feedback', ['field' => 'email'])
+                        </div>
+
+
+                        <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
+                            <label>Current password</label>
+                            <input type="password" name="old_password" class="form-control{{ $errors->has('old_password') ? ' is-invalid' : '' }}" placeholder="Current password" value="" required>
+                            @include('alerts.feedback', ['field' => 'old_password'])
+                        </div>
+
+                        <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
+                            <label>New Password</label>
+                            <input type="password" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="New password" value="" required>
+                            @include('alerts.feedback', ['field' => 'password'])
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm new password</label>
+                            <input type="password" name="password_confirmation" class="form-control" placeholder="Confirm new password" value="" required>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button id="print" onclick="printContent('body');" >Print</button>
+                    </div>
+                </form>
+            </div>
         </div>
 
-        </div>
+    </div>
     </div>
 
-    <div class="row">
-        <div class="col-1-10">
-           Name
-        </div>
-        <div class="col-1-52">
-            {{$admins->name}}
-        </div>
-        <div class="col-1-10">
-            12
-        </div>
-        <div class="col-1-10">
-            25
-        </div>
-        <div class="col-1-10">
-            $300.00
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-1-10">
-            ID_NO
-        </div>
-        <div class="col-1-52">
-            {{$admins->id_no}}
-        </div>
-        <div class="col-1-10">
-            12
-        </div>
-        <div class="col-1-10">
-            25
-        </div>
-        <div class="col-1-10">
-            $300.00
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-1-10">
-            Telephone_Number
-        </div>
-        <div class="col-1-52">
-            {{$admins->tel_no}}
-        </div>
-        <div class="col-1-10">
-            12
-        </div>
-        <div class="col-1-10">
-            25
-        </div>
-        <div class="col-1-10">
-            $300.00
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-1-10">
-            Permit_Number
-        </div>
-        <div class="col-1-52">
-            {{$admins->permit_no}}
-        </div>
-        <div class="col-1-10">
-            12
-        </div>
-        <div class="col-1-10">
-            25
-        </div>
-        <div class="col-1-10">
-            $300.00
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-1-10">
-          Relationship_With_Deceased
-        </div>
-        <div class="col-1-52">
-            {{$admins->relationship}}
-        </div>
-        <div class="col-1-10">
-            12
-        </div>
-        <div class="col-1-10">
-            25
-        </div>
-        <div class="col-1-10">
-            $300.00
-        </div>
-    </div>
-    <div class="row panel">
-        <div class="col-1-10">
+@endsection
+@push('js')
+    <script>
+        function printContent(el){
+            var restorepage = $('body').html();
+            var printcontent = $('#' + el).clone();
+            $('body').empty().html(printcontent);
+            window.print();
+            $('body').html(restorepage);
+        }
+    </script>
 
-        </div>
-        <div class="col-1-52">
 
-        </div>
-        <div class="col-1-10">
-
-        </div>
-        <div class="col-1-10">
-            Pay this amount:
-        </div>
-        <div class="col-1-10">
-            $900.00
-        </div>
-    </div>
-</section>
-
-</body>
-</html>
+@endpush

@@ -63,8 +63,6 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
-        //
-//        dd($request);
 
         $admit = new Payment();
         $var = $request->payment_date;
@@ -86,8 +84,6 @@ class PaymentController extends Controller
           $bal=$bills->bill_balance-$request->amount_paid;
 
         }
-
-
         $affected = DB::table('bills')
             ->where('id', $request->order_id)
             ->update(['amount_paid' =>$request->amount_paid +$current,'bill_balance'=>$bal]);
@@ -106,19 +102,15 @@ class PaymentController extends Controller
     {
         $bills =DB::table('payments')
                   ->where('id',$id)->get();
-//        dd($bills);
       $client_id=$bills[0]->customer_id;
       $order_id=$bills[0]->order_id;
-//      dd($order_id);
         $clients=DB::table('admissions')->where('id',$client_id)->first();
-//        dd($clients);
         $pays=DB::table('bills')->where('id',$order_id)->first();
-//        dd($pays);
         $orders =DB::table('bill__services')
             ->join('services', 'services.id', '=', 'bill__services.product_id')
             ->select('bill__services.*', 'services.name')
             ->where('bill__services.order_id',$order_id)->get();
-//        dd($orders);
+
         return view('pay.receipt', compact('bills','clients','orders','pays'));
     }
 

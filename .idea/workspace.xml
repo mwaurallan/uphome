@@ -23,7 +23,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pay/receipt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pay/receipt.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/uphome/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/uphome/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +191,7 @@
       <workItem from="1605811641787" duration="52339000" />
       <workItem from="1606243328177" duration="83633000" />
       <workItem from="1606814584396" duration="35061000" />
-      <workItem from="1606980239505" duration="24041000" />
+      <workItem from="1606980239505" duration="30239000" />
     </task>
     <servers />
   </component>
@@ -258,21 +259,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606498567253" />
-    <state x="277" y="39" width="672" height="160" key="search.everywhere.popup" timestamp="1606997162760">
+    <state x="277" y="39" width="672" height="160" key="search.everywhere.popup" timestamp="1607019375916">
       <screen x="0" y="0" width="1093" height="574" />
     </state>
-    <state x="277" y="39" width="672" height="160" key="search.everywhere.popup/0.0.1093.574@0.0.1093.574" timestamp="1606997162760" />
+    <state x="277" y="39" width="672" height="160" key="search.everywhere.popup/0.0.1093.574@0.0.1093.574" timestamp="1607019375916" />
     <state x="346" y="49" width="672" height="160" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606919889106" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/routes/web.php</url>
-          <line>31</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
