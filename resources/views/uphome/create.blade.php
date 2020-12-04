@@ -16,14 +16,8 @@
                         </div>
                     </div>
                     <div class="card-body">
-
-
-
-
-
                         <form method="post" action="{{ route('admission.store') }}" autocomplete="off">
                             @csrf
-
                             <h6 class="heading-small text-muted mb-4">Admission Information</h6>
                             <div class="pl-lg-4">
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
@@ -48,13 +42,10 @@
                                         @foreach ($counties as $county)
 
                                             <option value="{{$county}}" selected>{{$county}}</option>
-
                                         @endforeach
                                     </select>
-
                                     @include('alerts.feedback', ['field' => 'home_area'])
                                 </div>
-
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                                     <label class="form-control-label"for="input-name">Telephone_No</label>
                                     <input type="text" name="tel_no" id="input-Telephone_no" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name" value="{{ old('name') }}" required autofocus>
@@ -75,10 +66,6 @@
                                     <input type="text" name="relationship" id="input-relationship" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name" value="{{ old('name') }}" required autofocus>
                                     @include('alerts.feedback', ['field' => 'relationship'])
                                 </div>
-
-
-
-
                                 <div class="row">
                                     <div>
                                         <div class="form-group{{ $errors->has('stock') ? ' has-danger' : '' }}">
