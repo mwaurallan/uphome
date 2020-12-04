@@ -56,31 +56,33 @@ class BillController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request->bill_total);
+//        dd($request);
         $id=$request->customer_name;
         $client = DB::table('admissions')->where('id', $id)->first();
        $name=$client->name;
        $id2=$client->id;
-        //$client=Admission::find('id',$request->customer_name);
-       // Post::where('id', $id)->first()
-       ;
-      //  dd($file->name);
+        $total=0;
+        $products = $request->input('products', []);
+        $quantities = $request->input('quantities', []);
+        foreach($quantities as $order)
+        {
+            $total += $order;
+        }
+        //dd($total);
 
          Bill::create([
              'customer_name'=>$name,
              'customer_email'=>$id2,
-             'bill_total'=>$request->bill_total,
-             'bill_balance'=>$request->bill_total,
+             'bill_total'=>$total,
+             'bill_balance'=>$total,
              ]);
 
         $id2=Bill::latest()->first();
         $id2=$id2->id;
-        //dd($id2);
-      //  $id2=$one->id;
 
+//        $products = $request->input('products', []);
+//        $quantities = $request->input('quantities', []);
 
-        $products = $request->input('products', []);
-        $quantities = $request->input('quantities', []);
       //  for($i = 0;$i<count($products);$si++){
             for ($product=0; $product < count( $products); $product++){
                // for ($quantity=0;$quantity< count( $products); $quantity++) {
@@ -89,22 +91,8 @@ class BillController extends Controller
                         'product_id' => $products[$product],
                         'quantity' => $quantities[$product]
                     ]);
-               //}
         }
-//
-      //  }
-        // Transaction::where('payment_method_id', $method->id)->latest()
 
-        // $name=Product2::find($request->products,'id');
-        // $name2=Product2::where('id',$name)->latest();
-        //   dd($name2);
-//        $quantities = $request->input('quantities', []);
-//
-//        for ($product=0; $product < count($products); $product++) {
-//            if ($products[$product] != '') {
-//                $order->services()->attach($products[$product], ['quantity' => $quantities[$product]]);
-//            }
-//        }
 
         return redirect()->route('services.index');
     }

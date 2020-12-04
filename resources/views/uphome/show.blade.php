@@ -15,15 +15,12 @@
                     </div>
 
                 </div>
-                <form method="post" action="{{ route('profile.update') }}" autocomplete="off">
+                {{$admins->id}}
+                <form method="post" action="" autocomplete="off">
                     <div class="card-body">
-                        @csrf
-                        @method('put')
-
-                        @include('alerts.success')
 
                         <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                            <label>Name</label>
+                            <label  class="form-control-label" for="input-name">Name_of_Deceased</label>
                             <input type="text" name="name" class="form-control" placeholder="Name" value="{{ old('name', auth()->user()->name) }}">
                             @include('alerts.feedback', ['field' => 'name'])
                         </div>

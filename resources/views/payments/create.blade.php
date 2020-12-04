@@ -37,16 +37,7 @@
                    </em>
                @endif
            </div>
-           <div class="form-group {{ $errors->has('bill_total') ? 'has-error' : '' }}">
-               Total Bill
-               <input type="text" name="bill_total" class="form-control"
-                      value="{{ old('bill_total') }}">
-               @if($errors->has('bill_total'))
-                   <em class="invalid-feedback">
-                       {{ $errors->first('bill_total')}}
-                   </em>
-               @endif
-           </div>
+
            {{-- ... customer name and email fields --}}
 
            <div class="card">

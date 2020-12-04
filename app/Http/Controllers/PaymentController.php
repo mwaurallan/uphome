@@ -63,6 +63,7 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
+//        dd($request);
 
         $admit = new Payment();
         $var = $request->payment_date;
@@ -110,8 +111,10 @@ class PaymentController extends Controller
             ->join('services', 'services.id', '=', 'bill__services.product_id')
             ->select('bill__services.*', 'services.name')
             ->where('bill__services.order_id',$order_id)->get();
+            $total=$orders->sum('quantity');
+//        dd($total);
 
-        return view('pay.receipt', compact('bills','clients','orders','pays'));
+        return view('pay.receipt', compact('bills','clients','orders','pays','total'));
     }
 
     /**

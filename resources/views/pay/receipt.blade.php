@@ -43,10 +43,11 @@
 
                            @foreach ($orders as $order)
 
-                                 <tr><td>{{$order->name}}</td><td>{{$order->quantity}}</td></tr>
+                                 <tr><td>{{$order->name}}</td><td>{{number_format($order->quantity,2)}}</td></tr>
 
 
                            @endforeach
+                    <tr><td>Receipt Total</td><td>{{number_format($total,2)}}</td></tr>
 
                        <tr id="product1"></tr>
 
