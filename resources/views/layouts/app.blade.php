@@ -71,6 +71,11 @@
                 {
                     font-size: 20px;
                 }
+                textarea
+                {
+                    font-family:"Times New Roman", Times, serif;
+                    font-size: 18px;
+                }
             </style>
 
 

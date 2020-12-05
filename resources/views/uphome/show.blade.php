@@ -71,11 +71,38 @@
                             </div>
 
                         </div>
+                        <p>Witnessed By :Clerk At UPHOME</p>
+                        <div class="row">
+                            <div class="col-4">
+                                 <div class="form-group">
+                                <textarea id="w3review" name="w3review" rows="6" cols="100">
+
+                                    Witness Name_________________Signature__________________
+
+                                    Date Witnessed_________________________
+
+                                </textarea>
+                            </div>
+                            </div>
+
+                        </div>
+                        <p>Important Instructions</p>
+                        <div class="form-group">
+                                <textarea id="w3review" name="w3review" rows="6" cols="100">
+                                    1- All bills clearance to be done one day before body collection
+                                    3-A Coffin clean clothes one day befor body removal
+                                    1-Original burial permit
+                                    3-Original ID for rightful next of kin
+                                </textarea>
+                        </div>
+                        I have read and understood all the terms and conditions and agreed to abide
+                        by them Sign______________________________________
                     </div>
-                    <div class="card-footer">
-                        <button id="print" onclick="printContent('body');" >Print</button>
-                    </div>
+
                 </form>
+                <div class="card-footer">
+                    <button id="print" onclick="printContent('body');" >Print</button>
+                </div>
             </div>
 
 
