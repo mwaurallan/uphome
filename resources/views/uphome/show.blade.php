@@ -3,8 +3,8 @@
 @section('content')
 
     <div id="body">
-    <div class="row">
-        <div class="col-md-8">
+
+
             <div class="card  center" style="width:60rem;">
                 <div class="card-header">
                     <div class="center2">
@@ -77,9 +77,9 @@
                     </div>
                 </form>
             </div>
-        </div>
 
-    </div>
+
+
     </div>
 
 @endsection
