@@ -28,7 +28,7 @@
                     width: 60%;
                     border: 3px solid #73AD21;
                     padding: 10px;
-                    text-align: center;
+                    text-align: left;
                 }
                 .center2 {
                     margin: auto;
@@ -63,6 +63,13 @@
                 }
                 .no-outline:focus {
                     outline: none;
+                }
+                p {
+                    font-size: 1.875em;
+                }
+                input[type='text']
+                {
+                    font-size: 20px;
                 }
             </style>
 

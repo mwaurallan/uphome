@@ -83,13 +83,10 @@ class PaymentController extends Controller
         else
         {
           $bal=$bills->bill_balance-$request->amount_paid;
-
         }
         $affected = DB::table('bills')
             ->where('id', $request->order_id)
             ->update(['amount_paid' =>$request->amount_paid +$current,'bill_balance'=>$bal]);
-
-        // $model->create($request->all());
        $pay=Payment::latest()->first();
         $id=$pay->id;
 

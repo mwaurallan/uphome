@@ -106,7 +106,7 @@ class AdmissionController extends Controller
     public function print( $id)
     {
         //
-       // dd($id);
+//        dd($id);
         $admins=DB::table('admissions')->where('id',$id)->first();
 
 //     dd($admins);
