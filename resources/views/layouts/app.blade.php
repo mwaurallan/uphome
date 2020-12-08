@@ -67,6 +67,9 @@
                 p {
                     font-size: 1.875em;
                 }
+                h1{
+                    font-size: 2.875em;
+                }
                 input[type='text']
                 {
                     font-size: 20px;

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Admission;
 use App\ProductCategory;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -61,7 +62,11 @@ class AdmissionController extends Controller
     public function store(Request $request)
     {
         //
-//        dd($request);
+        $curr_date=$request->date_admitted;
+        $curr_date=Carbon::now();
+
+//
+//        dd($cur_date);
         $admit = new Admission();
        $user=Auth::user()->name;
 
@@ -72,7 +77,7 @@ class AdmissionController extends Controller
         $admit->home_area = $request->home_area;
         $admit->tel_no = $request->tel_no;
         //$admit->date_admitted= $request->date_admitted;
-        $admit->date_admitted=date('y-m-d',strtotime($request->date_admitted));
+        $admit->date_admitted=$curr_date;
         $admit->permit_no = $request->permit_no;
         $admit->relationship = $request->relationship;
         $admit->user_name=$user;

@@ -51,7 +51,7 @@
                             <div>
                                 <div class="form-group{{ $errors->has('stock') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-stock"><p>Date Admitted</p></label>
-                                    <input type="text" name="county" id="home_area" class="form-control" value="{{\Carbon\Carbon::parse($admins->date_admitted)->format('j F, Y')}}"required>
+                                    <input type="text" name="county" id="home_area" class="form-control" value="{{$admins->date_admitted}}"required>
 
 
                                 </div>
@@ -94,6 +94,7 @@
                                     1-Original burial permit
                                     3-Original ID for rightful next of kin
                                 </textarea>
+                            <h1>EEEEE</h1>
                         </div>
                         I have read and understood all the terms and conditions and agreed to abide
                         by them Sign______________________________________

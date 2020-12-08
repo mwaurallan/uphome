@@ -8,9 +8,6 @@
                 </a>
             </li>
 
-
-
-
             <li @if ($pageSlug == 'clients') class="active " @endif>
                 <a href="{{ route('admission.index') }}">
                     <i class="tim-icons icon-single-02"></i>
