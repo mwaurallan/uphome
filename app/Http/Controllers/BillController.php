@@ -25,7 +25,7 @@ class BillController extends Controller
         $bills =DB::table('bills')
             ->join('admissions', 'admissions.id', '=', 'bills.customer_email')
             ->select('bills.*', 'admissions.name','admissions.name_of_deceased')
-            ->orderBy('id', 'desc')->get();
+            ->orderBy('id', 'asc')->get();
 
 //        dd($bills);
 

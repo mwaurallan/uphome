@@ -33,13 +33,15 @@ Route::group(['middleware' => 'auth'], function () {
         'inventory/categories' => 'ProductCategoryController',
         'transactions/transfer' => 'TransferController',
         'methods' => 'MethodController',
+
     ]);
 
-    Route::resource('transactions', 'TransactionController')->except(['create', 'show']);
+    Route::resource('paid', 'TransactionController')->except(['create', 'show']);
     Route::get('transactions/stats/{year?}/{month?}/{day?}', ['as' => 'transactions.stats', 'uses' => 'TransactionController@stats']);
     Route::get('print/{id}',"AdmissionController@print");
     Route::get('print2/{id}',"PaymentController@print");
     Route::get('print3/{id}',"PaymentController@receipt");
+    Route::get('print4',"ReportController@payment");
 //    Route::get('/anyUrl/{id}', 'controller@function');
     Route::get('pay/{id}',"PaymentController@display");
     Route::get('transactions/{type}', ['as' => 'transactions.type', 'uses' => 'TransactionController@type']);

@@ -41,7 +41,7 @@
                                @foreach ($bills as $bill)
 
                                     <tr>
-                                        <td>{{ $bill->id }}</td>
+                                        <td>{{$bill->id }}</td>
                                         <td>{{$bill->name}}</td>
                                         <td>{{$bill->name_of_deceased}}</td>
                                         <td>{{$bill->bill_total}}</td>

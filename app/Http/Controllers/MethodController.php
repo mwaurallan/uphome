@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Admission;
+use App\Service;
 use Carbon\Carbon;
 use App\Transaction;
 use App\PaymentMethod;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MethodController extends Controller
 {
@@ -16,19 +19,23 @@ class MethodController extends Controller
      */
     public function index()
     {
-        return view('methods.index', [
-            'methods' => PaymentMethod::paginate(15), 
-            'month' => Carbon::now()->month
-        ]);
+//        return view('methods.index', [
+//            'methods' => PaymentMethod::paginate(15),
+//            'month' => Carbon::now()->month
+//        ]);
+        $services=Service::all();
+//        dd($services);
+        return view('methods.create',compact('services'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function create()
     {
+
         return view('methods.create');
     }
 
@@ -38,13 +45,41 @@ class MethodController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, PaymentMethod $method)
-    {
-        $method->create($request->all());
+    public function store(Request $request)
+{
+//dd($request->date2);
 
-        return redirect()
-            ->route('methods.index')
-            ->withStatus('Payment method successfully created.');
+    $orders =DB::table('payments')
+        ->join('bills', 'bills.id', '=', 'payments.order_id')
+        ->join('bill__services','bill__services.order_id','=','bills.id')
+        ->join('services','services.id','=','bill__services.product_id')
+        ->select('payments.payment_date','payments.amount_paid', 'bills.customer_name','bill__services.product_id','services.name')
+        ->where('services.id',$request->service)
+        ->whereBetween('payment_date',[$request->date1,$request->date2])->get();
+
+        $total=$orders->sum('amount_paid');
+
+//dd($total);
+
+    return view('report.show',compact('orders','total'));
+}
+    public function receipt(Request $request, PaymentMethod $method)
+    {
+//        dd($request);
+        $bills =DB::table('payments')
+            ->where('id',$id)->get();
+        $client_id=$bills[0]->customer_id;
+        $order_id=$bills[0]->order_id;
+        $clients=DB::table('admissions')->where('id',$client_id)->first();
+        $pays=DB::table('bills')->where('id',$order_id)->first();
+        $orders =DB::table('bill__services')
+            ->join('services', 'services.id', '=', 'bill__services.product_id')
+            ->select('bill__services.*', 'services.name')
+            ->where('bill__services.order_id',$order_id)->get();
+        $total=$orders->sum('quantity');
+//        dd($total);
+
+        return view('pay.receipt',compact('bills','clients','orders','pays','total'));
     }
 
     /**
@@ -53,8 +88,9 @@ class MethodController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(PaymentMethod $method)
+    public function show($id)
     {
+        dd($id);
         Carbon::setWeekStartsAt(Carbon::SUNDAY);
         Carbon::setWeekEndsAt(Carbon::SATURDAY);
 
@@ -117,7 +153,7 @@ class MethodController extends Controller
     public function destroy(PaymentMethod $method)
     {
         $method->delete();
-        
+
         return back()->withStatus('Payment method successfully removed.');
     }
 }
