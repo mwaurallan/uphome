@@ -51,8 +51,9 @@
                                         <td></td>
                                         <td></td>
                                         <td>
-                                            <a href="{{ url('print2/'.$bill->id) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="More Details">
-                                                <i class="tim-icons icon-zoom-split"></i>
+                                            <a href="{{ url('print2/'.$bill->id) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="Click To Pay">
+
+                                                <i class="tim-icons icon-bank"></i>
                                             </a>
                                         </td>
                                         <td class="td-actions text-right">

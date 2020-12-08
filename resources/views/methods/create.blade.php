@@ -8,10 +8,10 @@
                     <div class="card-header">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">New Method</h3>
+                                <h3 class="mb-0">Report Summary</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ route('methods.index') }}" class="btn btn-sm btn-primary">Back to List</a>
+
                             </div>
                         </div>
                     </div>
@@ -21,7 +21,7 @@
                             <div class="row">
                                 <div>
                                     <div class="form-group{{ $errors->has('stock') ? ' has-danger' : '' }}">
-                                        <label class="form-control-label" for="input-stock"><p>Date Admitted</p></label>
+                                        <label class="form-control-label" for="input-stock"><p>Service Type</p></label>
                                         <select name="service" id="home_area" class="form-select2 form-control" required>
                                             @foreach ($services as $service)
 
@@ -32,19 +32,19 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="form-group{{ $errors->has('stock_defective') ? ' has-danger' : '' }}">
-                                        <label class="form-control-label" for="input-stock_defective"><p>Permit No:</p></label>
+                                        <label class="form-control-label" for="input-stock_defective"><p>Start Date:</p></label>
                                         <input type="date" name="date1" id="subcounty" class="form-control" value="">
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">
-                                        <label class="form-control-label" for="input-price"><p>Relationship</p></label>
+                                        <label class="form-control-label" for="input-price"><p>End Date</p></label>
                                         <input type="date"  name="date2" id="home_area" class="form-control" value="">
                                     </div>
                                 </div>
                                 <div class="col-4">
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-success mt-4">Save</button>
+                                    <button type="submit" class="btn btn-success mt-4">Show</button>
                                 </div>
                                 </div>
                             </div>
