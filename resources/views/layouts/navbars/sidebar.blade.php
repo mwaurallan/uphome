@@ -34,7 +34,7 @@
             <li @if ($pageSlug == 'methods') class="active " @endif>
                 <a href="{{ route('methods.index') }}">
                     <i class="tim-icons icon-wallet-43"></i>
-                    <p>Methods and Accounts</p>
+                    <p>REPORTS SUMMARY</p>
                 </a>
             </li>
 
