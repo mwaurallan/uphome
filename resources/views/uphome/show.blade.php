@@ -11,11 +11,9 @@
                         <p>UPHOME FUNERAL HOME</p>
                         <P>Tel:0798439434934</P>
                         <p>Email:info@uphome.com</p>
-                        <h1>Admission Form</h1>
+                        <p>Admission Form</p>
                     </div>
-
                 </div>
-
                 <form method="post" action="" autocomplete="off">
 
                     <div class="card-body">
@@ -49,16 +47,6 @@
                             <label><p>Tel No:</p></label>
                             <input type="text" name="tel_no" class="form-control" placeholder="Telephone Number" value="{{$admins->tel_no}}" required>
                             @include('alerts.feedback', ['field' => 'old_password'])
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
-                            <label><p>Name_of_Deceased</p></label>
-                            <input type="text" name="Name_of_Deceased" class="form-control" placeholder="" value="{{$admins->name_of_deceased}}" required>
-                            @include('alerts.feedback', ['field' => 'password'])
-                        </div>
-                        <div class="form-group">
-                            <label><p>Admission No</p></label>
-                            <input type="text" name="password_confirmation" class="form-control" placeholder="" value="{{$admins->id}}" required>
                         </div>
                         <div class="row">
                             <div>
@@ -102,17 +90,15 @@
                         <p>Important Instructions</p>
                         <div class="form-group">
                                 <textarea id="w3review" name="w3review" rows="6" cols="100" class="input2">
-                                    1- All bills clearance to be done one day before body collection
-                                    3-A Coffin clean clothes one day befor body removal
-                                    1-Original burial permit
-                                    3-Original ID for rightful next of kin
+                                    1-All Payments,bringing of clean clothes,coffin  and original burial permit
+                                    to be presented a day before the collection day between MON - FRI by 4PM
                                 </textarea>
                             <div>
-                            <h2>Note:On Sunday the facility remains closed,Kindly clear with the office on saturday between 7am to 12pm</h2>
+                            <h2>Note:On Sundays cashiers office remains closed,Kindly clear with the office on saturdays between 7am to 1pm</h2>
                             </div>
                         </div>
-                        I have read and understood all the terms and conditions and agreed to abide
-                        by them Sign______________________________________
+                        <p>I have read and understood all the terms and conditions and agreed to abide
+                            by them Sign______________________________________</p>
                     </div>
 
                 </form>

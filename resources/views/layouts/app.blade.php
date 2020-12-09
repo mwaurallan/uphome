@@ -96,7 +96,7 @@
                     box-shadow: 0 0 10px #719ECE;
                 }
                 .myDiv{
-                    border: 5px outset red;
+                    border: 3px outset red;
                     background-color: lightblue;
                     text-align: center;
                 }
