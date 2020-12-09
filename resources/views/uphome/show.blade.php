@@ -89,16 +89,16 @@
                         </div>
                         <p>Important Instructions</p>
                         <div class="form-group">
-                                <textarea id="w3review" name="w3review" rows="6" cols="100" class="input2">
+                                <textarea id="w3review" name="w3review" rows="5" cols="100" class="input2">
                                     1-All Payments,bringing of clean clothes,coffin  and original burial permit
                                     to be presented a day before the collection day between MON - FRI by 4PM
                                 </textarea>
                             <div>
-                            <h2>Note:On Sundays cashiers office remains closed,Kindly clear with the office on saturdays between 7am to 1pm</h2>
+                            <p>Note:On Sundays cashiers office remains closed,Kindly clear with the office on saturdays between 7am to 1pm</p>
                             </div>
                         </div>
-                        <p>I have read and understood all the terms and conditions and agreed to abide
-                            by them Sign______________________________________</p>
+                        I have read and understood all the terms and conditions and agreed to abide
+                            by them Sign______________________________________
                     </div>
 
                 </form>

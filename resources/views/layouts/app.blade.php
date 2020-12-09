@@ -82,7 +82,7 @@
                 textarea
                 {
                     font-family:"Times New Roman", Times, serif;
-                    font-size: 18px;
+                    font-size: 16px;
                     border:solid 1px #ccc;
                 }
                 .input:focus {
