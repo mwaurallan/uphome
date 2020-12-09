@@ -28,7 +28,7 @@
                             @include('alerts.feedback', ['field' => 'password'])
                         </div>
                         </div>
-                        <p>Next Of Kin Details</p>
+                        <p style="color:red;"> Next Of Kin Details</p>
 
                         <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                             <label  class="form-control-label" for="input-name"><p>Name</p></label>
@@ -72,7 +72,7 @@
                             </div>
 
                         </div>
-                        <p>Witnessed By :Clerk At UPHOME</p>
+                        <p style="color:red;">Witnessed By :Clerk At UPHOME</p>
                         <div class="row">
                             <div class="col-4">
                                  <div class="form-group">
@@ -87,7 +87,7 @@
                             </div>
 
                         </div>
-                        <p>Important Instructions</p>
+                        <p style="color:red;">Important Instructions</p>
                         <div class="form-group">
                                 <textarea id="w3review" name="w3review" rows="5" cols="100" class="input2">
                                     1-All Payments,bringing of clean clothes,coffin  and original burial permit
