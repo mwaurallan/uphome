@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Provider;
 use App\Http\Requests\ProviderRequest;
+use Illuminate\Support\Facades\DB;
 
 class ProviderController extends Controller
 {
@@ -29,6 +30,21 @@ class ProviderController extends Controller
     {
         return view('providers.create');
     }
+    public function print($id)
+    {
+        //
+//        dd($id);
+
+        $admins=DB::table('bills')->where('id',$id)->first();
+//        dd($admins);
+        $bills =DB::table('bill__services')
+            ->join('services', 'services.id', '=', 'bill__services.product_id')
+            ->select('bill__services.*', 'services.name')
+            ->where('bill__services.order_id',$id)->get();
+
+//     dd($bills);
+        return view('providers.create', compact('admins','bills'));
+    }
 
     /**
      * Store a newly created Provider in storage
@@ -37,8 +53,9 @@ class ProviderController extends Controller
      * @param  \App\Provider  $model
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(ProviderRequest $request, Provider $provider)
+    public function store(ProviderRequest $request)
     {
+        dd($request);
         $provider->create($request->all());
 
         return redirect()

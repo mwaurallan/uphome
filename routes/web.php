@@ -30,6 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
         'pay'=>'PaymentController',
         'services'=>'BillController',
         'admission'=>'AdmissionController',
+        'clearance'=>'ClearanceController',
         'inventory/categories' => 'ProductCategoryController',
         'transactions/transfer' => 'TransferController',
         'methods' => 'MethodController',
@@ -41,7 +42,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('print/{id}',"AdmissionController@print");
     Route::get('print2/{id}',"PaymentController@print");
     Route::get('print3/{id}',"PaymentController@receipt");
-    Route::get('print4',"ReportController@payment");
+    Route::get('print4/{id}',"ClearanceController@print");
 //    Route::get('/anyUrl/{id}', 'controller@function');
     Route::get('pay/{id}',"PaymentController@display");
     Route::get('transactions/{type}', ['as' => 'transactions.type', 'uses' => 'TransactionController@type']);
