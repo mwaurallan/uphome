@@ -83,6 +83,22 @@
                 {
                     font-family:"Times New Roman", Times, serif;
                     font-size: 18px;
+                    border:solid 1px #ccc;
+                }
+                .input:focus {
+                    outline: none !important;
+                    border:1px solid red;
+                    box-shadow: 0 0 10px #719ECE;
+                }
+                .input2 {
+                    outline: none !important;
+                    border:1px solid red;
+                    box-shadow: 0 0 10px #719ECE;
+                }
+                .myDiv{
+                    border: 5px outset red;
+                    background-color: lightblue;
+                    text-align: center;
                 }
             </style>
 

@@ -17,7 +17,20 @@
                 </div>
 
                 <form method="post" action="" autocomplete="off">
+
                     <div class="card-body">
+                        <div class="myDiv">
+                        <div class="form-group">
+                            <label><p>Admission No</p></label>
+                            <input type="text" name="password_confirmation" class="form-control" placeholder="" value="{{$admins->id}}" required>
+                        </div>
+                        <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
+                            <label><p>Name_of_Deceased</p></label>
+                            <input type="text" name="Name_of_Deceased" class="form-control" placeholder="" value="{{$admins->name_of_deceased}}" required>
+                            @include('alerts.feedback', ['field' => 'password'])
+                        </div>
+                        </div>
+                        <p>Next Of Kin Details</p>
 
                         <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                             <label  class="form-control-label" for="input-name"><p>Name</p></label>
@@ -75,7 +88,7 @@
                         <div class="row">
                             <div class="col-4">
                                  <div class="form-group">
-                                <textarea id="w3review" name="w3review" rows="6" cols="100">
+                                <textarea id="w3review" name="w3review" rows="6" cols="100" class="input2">
 
                                     Witness Name_________________Signature__________________
 
@@ -88,7 +101,7 @@
                         </div>
                         <p>Important Instructions</p>
                         <div class="form-group">
-                                <textarea id="w3review" name="w3review" rows="6" cols="100">
+                                <textarea id="w3review" name="w3review" rows="6" cols="100" class="input2">
                                     1- All bills clearance to be done one day before body collection
                                     3-A Coffin clean clothes one day befor body removal
                                     1-Original burial permit
