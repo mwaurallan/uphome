@@ -70,7 +70,7 @@
                 h1{
                     font-size: 1.9em;
                     color: yellow;
-                    border: 3px solid #73AD21;
+                    border: 0px solid #73AD21;
                 }
                 h2{
                     color: #00b290;

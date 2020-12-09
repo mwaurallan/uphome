@@ -12,11 +12,23 @@
                             <img src="{{ asset('assets/img/logo10.jpeg') }}" width="300" height="300" class="img-fluid" alt="Uphome Logo">
                         </div>
                         <div class="col">
-                            <div class="card-block px-6">
+                            <div class="card-block px-6" align="center">
                                 <p class="card-text">UPHOME FUNERAL HOME</p>
-                                <p class="card-text">Email:uphome@gmail.com</p>
-                                <p class="card-text">Tel:0883292332/082398932</p>
                             </div>
+                            <div align="center">
+                                Email:uphome@gmail.com
+                                <div>
+                                Tel:0883292332/082398932
+                                </div>
+                                <div>
+                                    Website:www.uphomefuneral.com
+                                </div>
+                                <div>
+                                    Along Nairobi-Nakuru Highway
+                                </div>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -84,9 +96,9 @@
                                  <div class="form-group">
                                 <textarea id="w3review" name="w3review" rows="6" cols="100" class="input2">
 
-                                    Witness Name_________________Signature__________________
+                                    Witness Name_____________________________Signature__________________
 
-                                    Date Witnessed_________________________
+                                    Date Witnessed____________________________
 
                                 </textarea>
                             </div>

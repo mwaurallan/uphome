@@ -3,32 +3,44 @@
 @section('content')
 
    <div id="body">
-
-           {{-- ... customer name and email fields --}}
-
-           <div class="card  center" style="width: 50rem;">
-               <div class="card-header">
-                   <div class="center2">
-                       <p>UPHOME FUNERAL HOME</p>
-                       <p>Official Receipt</p>
-                       <P>Tel:0798439434934</P>
-                       <p>Email:info@uphome.com</p>
-                   </div>
-
+       <div class="card  center" style="width:60rem;">
+       <div class="card-header">
+           <div class="row no-gutters">
+               <div class="col-auto">
+                   <img src="{{ asset('assets/img/logo10.jpeg') }}" width="300" height="300" class="img-fluid" alt="Uphome Logo">
                </div>
-
-
+               <div class="col">
+                   <div class="card-block px-6" align="center">
+                       <p class="card-text">UPHOME FUNERAL HOME</p>
+                   </div>
+                   <div align="center">
+                       Email:uphome@gmail.com
+                       <div>
+                           Tel:0883292332/082398932
+                       </div>
+                       <div>
+                           Website:www.uphomefuneral.com
+                       </div>
+                       <div>
+                           Along Nairobi-Nakuru Highway
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
                <div class="card-body">
                    <table class="table" id="products_table">
-                       <thead>
-            <p>Received From:{{$clients->name}} ---Name Of Deceased:{{$clients->name_of_deceased}}</p>
-                       <p>Payment Date--{{$bills[0]->payment_date}}</p>
-                        <p>Bill_Total --{{$pays->bill_total}}--Amount_Paid--{{$bills[0]->amount_paid}}--Balance--{{$pays->bill_balance}}</p>
+                       <thead style="background-color:magenta">
+                       <td>Received From:{{$clients->name}} </td><td>Name Of Deceased:{{$clients->name_of_deceased}}::Payment Date--{{$bills[0]->payment_date}}</td>
+                       <thead> <td>Bill_Total --{{$pays->bill_total}}</td><td>Amount_Paid--{{$bills[0]->amount_paid}}(Balance--{{$pays->bill_balance}}) </td></thead>
+
+                      ----
                         <p></p>
                        </thead>
 
                        <tbody>
-                    <h1>Services</h1>
+                    <h1>Receipt Details</h1>
+                    <p>Rct Number::{{$clients->id}}</p>
                        <tr>
 
                        </tr>
@@ -39,6 +51,7 @@
                        <tr>
                            <th>Services</th>
                            <th>Amount</th>
+
                        </tr>
 
                            @foreach ($orders as $order)
@@ -47,7 +60,7 @@
 
 
                            @endforeach
-                    <tr><td>Receipt Total</td><td>{{number_format($total,2)}}</td></tr>
+                    <tr><td><p>Receipt Total</p></td><td><p>{{number_format($total,2)}}</p></td></tr>
 
                        <tr id="product1"></tr>
 
