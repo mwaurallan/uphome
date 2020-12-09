@@ -33,8 +33,8 @@
                 .center2 {
                     margin: auto;
                     width: 60%;
-                    padding: 10px;
-                    text-align: center;
+                    padding: 0px;
+                    text-align:right;
                 }
                 .right {
                     position: absolute;
@@ -99,6 +99,9 @@
                     border: 3px outset red;
                     background-color: lightblue;
                     text-align: center;
+                }
+                img {
+                    border-radius: 8px;
                 }
             </style>
 

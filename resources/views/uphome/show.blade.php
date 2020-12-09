@@ -7,11 +7,17 @@
 
             <div class="card  center" style="width:60rem;">
                 <div class="card-header">
-                    <div class="center2">
-                        <p>UPHOME FUNERAL HOME</p>
-                        <P>Tel:0798439434934</P>
-                        <p>Email:info@uphome.com</p>
-                        <p>Admission Form</p>
+                    <div class="row no-gutters">
+                        <div class="col-auto">
+                            <img src="{{ asset('assets/img/logo10.jpeg') }}" width="300" height="300" class="img-fluid" alt="Uphome Logo">
+                        </div>
+                        <div class="col">
+                            <div class="card-block px-6">
+                                <p class="card-text">UPHOME FUNERAL HOME</p>
+                                <p class="card-text">Email:uphome@gmail.com</p>
+                                <p class="card-text">Tel:0883292332/082398932</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <form method="post" action="" autocomplete="off">
