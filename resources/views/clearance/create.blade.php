@@ -26,6 +26,11 @@
                                     @include('alerts.feedback', ['field' => 'name_of_deceased'])
                                 </div>
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="input-name">Admission Number</label>
+                                    <input type="text" name="adm_no"  class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name" value="{{$bills[0]->id}}" required  readonly>
+                                    @include('alerts.feedback', ['field' => 'adm_no'])
+                                </div>
+                                <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-name">Name</label>
                                     <input type="text" name="name" id="input-name" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name" value="{{$bills[0]->name}}" required  readonly>
                                     @include('alerts.feedback', ['field' => 'name'])

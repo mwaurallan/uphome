@@ -81,12 +81,7 @@ class AdmissionController extends Controller
         $admit->permit_no = $request->permit_no;
         $admit->relationship = $request->relationship;
         $admit->user_name=$user;
-      //  $data['birthday'] = date('Y-m-d', strtotime($data['birthday']));
-
         $admit->save();
-
-       // $model->create($request->all());
-
         return redirect()
             ->route('admission.index')
             ->withStatus('Admission successfully registered.');

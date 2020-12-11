@@ -43,6 +43,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('print2/{id}',"PaymentController@print");
     Route::get('print3/{id}',"PaymentController@receipt");
     Route::get('print4/{id}',"ClearanceController@print");
+    Route::get('print5/{id}',"ClearanceController@print5");
 //    Route::get('/anyUrl/{id}', 'controller@function');
     Route::get('pay/{id}',"PaymentController@display");
     Route::get('transactions/{type}', ['as' => 'transactions.type', 'uses' => 'TransactionController@type']);

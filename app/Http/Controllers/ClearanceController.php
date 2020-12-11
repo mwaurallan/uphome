@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Clearance;
 use App\Payment;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ClearanceController extends Controller
@@ -16,7 +18,10 @@ class ClearanceController extends Controller
      */
     public function index()
     {
-        //
+
+        $clients = Clearance::all();
+
+        return view('clearance.index', compact('clients'));
     }
 
     /**
@@ -67,8 +72,38 @@ class ClearanceController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        dd($request);
+
+//        dd($request);
+        $curr_date=$request->date_admitted;
+        $curr_date=Carbon::now();
+
+//
+//        dd($cur_date);
+//        $admit = new Admission();
+        $admit= new Clearance();
+//        $user=Auth::user()->name;
+        $user=Auth::user()->name;
+        $admit->name_of_deceased = $request->name_of_deceased;
+        $admit->adm_no= $request->adm_no;
+        $admit->next_of_kin = $request->name;
+        $admit->id_no= $request->id_no;
+        $admit->permit_no = $request->permit_no;
+        $admit->county = $request->county;
+        $admit->subcounty = $request->subcounty;
+        $admit->location= $request->location;
+        $admit->village = $request->village;
+        $admit->nearest_centre = $request->nearest_centre;
+        $admit-> nearest_police= $request->nearest_police;
+        $admit-> witness= $request->witness;
+        $admit-> witness_id= $request->witness_id;
+        $admit-> auth_officer= $request->auth_officer;
+        $admit-> release_officer= $request->release_officer;
+        $admit-> release_date= $request->release_date;
+        $admit->rct_no=$request->rct_no;
+        $admit->save();
+        return redirect()
+            ->route('clearance.index')
+            ->withStatus('Clearance successfully registered.');
     }
 
     /**
@@ -80,6 +115,15 @@ class ClearanceController extends Controller
     public function show(Clearance $clearance)
     {
         //
+    }
+    public function print5( $id)
+    {
+        //
+//        dd($id);
+        $admins=DB::table('admissions')->where('id',$id)->first();
+
+//     dd($admins);
+        return view('uphome.show', compact('admins'));
     }
 
     /**

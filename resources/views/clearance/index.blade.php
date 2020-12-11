@@ -26,9 +26,9 @@
                                 <th>Name</th>
                                 <th>Name of Deceased</th>
                                 <th>ID NO</th>
-                                <th>Telephone</th>
+                                <th>Permit No</th>
                                 <th>Burial_Permit</th>
-                                <th>Date_Admitted</th>
+                                <th>Release_Date</th>
                                 <th>Actions</th>
                                 <th>Clear</th>
                                 <th></th>
@@ -38,14 +38,14 @@
                                @foreach ($clients as $client)
 
                                     <tr>
-                                        <td>{{ $client->name }}</td>
+                                        <td>{{ $client->next_of_kin }}</td>
                                         <td>{{$client->name_of_deceased}}</td>
                                         <td>{{ $client->id_no }}</td>
-                                        <td> {{ $client->tel_no}}</td>
+                                        <td> {{ $client->permit_no}}</td>
                                         <td>{{$client->permit_no }}</td>
-                                        <td>{{$client->date_admitted}}</td>
+                                        <td>{{$client->release_date}}</td>
                                         <td>
-                                        <a href="{{ url('print/'.$client->id) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="More Details">
+                                        <a href="{{ url('print5/'.$client->id) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="More Details">
                                             <i class="tim-icons icon-zoom-split"></i>
                                         </a>
                                         </td>
