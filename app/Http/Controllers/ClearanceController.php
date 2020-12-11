@@ -120,10 +120,10 @@ class ClearanceController extends Controller
     {
         //
 //        dd($id);
-        $admins=DB::table('admissions')->where('id',$id)->first();
-
-//     dd($admins);
-        return view('uphome.show', compact('admins'));
+        $clients=DB::table('clearances')->where('id',$id)->first();
+//            dd($clients);
+//     dd($clients->name_of_deceased);
+        return view('clearance.show', compact('clients'));
     }
 
     /**
