@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Clearance;
 use App\Provider;
 use App\Http\Requests\ProviderRequest;
 use Illuminate\Support\Facades\DB;
@@ -16,9 +17,9 @@ class ProviderController extends Controller
      */
     public function index(Provider $model)
     {
-        $providers = Provider::paginate(25);
+        $clients = Clearance::all();
 
-        return view('providers.index', compact('providers'));
+        return view('clearance.index', compact('clients'));
     }
 
     /**

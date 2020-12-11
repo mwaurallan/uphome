@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Clearance;
+use App\Payment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -39,20 +40,29 @@ class ClearanceController extends Controller
 
 
         $admins=DB::table('bills')->where('id',$id)->first();
-//        dd($admins);
-        $bills =DB::table('bill__services')
-            ->join('services', 'services.id', '=', 'bill__services.product_id')
-            ->select('bill__services.*', 'services.name')
-            ->where('bill__services.order_id',$id)->get();
+//       $pay= Payment::query()
+//            ->where('customer_id', '=', $id)
+//           ->latest('id')
+//           ->first()
+//           ->get();
+        $results = Payment::latest('id')
+            ->where('customer_id','=',$id)->first();
+//       dd($results->id);
+        $rct_id=$results->id;
+
+        $bills =DB::table('admissions')
+            ->where('admissions.id',$id)->get();
 
 //     dd($bills);
-        return view('clearance.create', compact('admins','bills','counties','subcounties'));
+
+        return view('clearance.create', compact('admins','bills','counties','subcounties','rct_id'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\
+     * Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
