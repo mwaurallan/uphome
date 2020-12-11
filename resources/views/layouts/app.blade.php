@@ -68,9 +68,10 @@
                     font-size: 1.875em;
                 }
                 h1{
-                    font-size: 1.9em;
-                    color: yellow;
-                    border: 0px solid #73AD21;
+                    font-size: 2.4em;
+                    color: green;
+
+
                 }
                 h2{
                     color: #00b290;
@@ -95,10 +96,18 @@
                     border:1px solid red;
                     box-shadow: 0 0 10px #719ECE;
                 }
+                .input3 {
+                    border:0px solid red;
+                    box-shadow: 0 0 0px #719ECE;
+                    outline: none;
+                }
                 .myDiv{
                     border: 3px outset red;
                     background-color: lightblue;
                     text-align: center;
+                }
+                .myDiv2{
+                    color: #00bf9a;
                 }
                 img {
                     border-radius: 8px;
