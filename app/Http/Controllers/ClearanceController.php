@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Symfony\Component\Console\Input\Input;
 
 class ClearanceController extends Controller
 {
@@ -74,36 +75,43 @@ class ClearanceController extends Controller
     {
 
 //        dd($request);
-        $curr_date=$request->date_admitted;
-        $curr_date=Carbon::now();
-
+        $user = Clearance::where('adm_no', '=',$request->adm_no)->first();
+        if ($user === null) {
+            $curr_date=$request->release_date;
+            $curr_date=Carbon::now();
 //
-//        dd($cur_date);
-//        $admit = new Admission();
-        $admit= new Clearance();
+            $admit= new Clearance();
 //        $user=Auth::user()->name;
-        $user=Auth::user()->name;
-        $admit->name_of_deceased = $request->name_of_deceased;
-        $admit->adm_no= $request->adm_no;
-        $admit->next_of_kin = $request->name;
-        $admit->id_no= $request->id_no;
-        $admit->permit_no = $request->permit_no;
-        $admit->county = $request->county;
-        $admit->subcounty = $request->subcounty;
-        $admit->location= $request->location;
-        $admit->village = $request->village;
-        $admit->nearest_centre = $request->nearest_centre;
-        $admit-> nearest_police= $request->nearest_police;
-        $admit-> witness= $request->witness;
-        $admit-> witness_id= $request->witness_id;
-        $admit-> auth_officer= $request->auth_officer;
-        $admit-> release_officer= $request->release_officer;
-        $admit-> release_date= $request->release_date;
-        $admit->rct_no=$request->rct_no;
-        $admit->save();
-        return redirect()
-            ->route('clearance.index')
-            ->withStatus('Clearance successfully registered.');
+            $user=Auth::user()->name;
+            $admit->name_of_deceased = $request->name_of_deceased;
+            $admit->adm_no= $request->adm_no;
+            $admit->next_of_kin = $request->name;
+            $admit->id_no= $request->id_no;
+            $admit->permit_no = $request->permit_no;
+            $admit->county = $request->county;
+            $admit->subcounty = $request->subcounty;
+            $admit->location= $request->location;
+            $admit->village = $request->village;
+            $admit->nearest_centre = $request->nearest_centre;
+            $admit-> nearest_police= $request->nearest_police;
+            $admit-> witness= $request->witness;
+            $admit-> witness_id= $request->witness_id;
+            $admit-> auth_officer= $request->auth_officer;
+            $admit-> release_officer= $request->release_officer;
+            $admit-> release_date=  $curr_date;
+            $admit->rct_no=$request->rct_no;
+            $admit->save();
+            return redirect()
+                ->route('clearance.index')
+                ->withStatus('Clearance successfully registered.');
+
+        }
+        else{
+            return redirect()
+                ->route('clearance.index')
+                ->withStatus('Clearance Exists.');
+        }
+
     }
 
     /**
