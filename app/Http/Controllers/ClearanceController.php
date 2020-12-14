@@ -128,8 +128,14 @@ class ClearanceController extends Controller
     {
         //
 //        dd($id);
+//        $results = Payment::latest('id')
+//            ->join('bills')
+//            ->where('customer_id','=',$id)->first();
+//        dd($results);
+        //$admins=DB::table('bills')->where('id',$id)->first();
+
         $clients=DB::table('clearances')->where('id',$id)->first();
-//            dd($clients);
+
 //     dd($clients->name_of_deceased);
         return view('clearance.show', compact('clients'));
     }

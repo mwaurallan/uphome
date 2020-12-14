@@ -65,7 +65,7 @@
                     outline: none;
                 }
                 p {
-                    font-size: 1.875em;
+                    font-size: 1.5em;
                 }
                 h1{
                     font-size: 2.4em;
