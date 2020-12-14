@@ -15,9 +15,9 @@
                                 <p class="card-text">UPHOME FUNERAL HOME</p>
                             </div>
                             <div align="center">
-                                Email:uphome@gmail.com
+                                Email:uuphome44@gmail.com
                                 <div>
-                                Tel:0883292332/082398932
+                                Tel:072875392/0729544203
                                 </div>
                                 <div>
                                     Website:www.uphomefuneral.com
@@ -121,13 +121,13 @@
                             <div class="col-4">
                                  <div class="form-group">
                                     <label class="form-control-label" for="input-price"><p>Witness</p></label>
-                                    <input type="text"  name="nearest_police"  class="form-control input3" value="{{$clients->witness}}" readonly>
+                                    <input type="text"  name="nearest_police"  class="form-control input2" value="{{$clients->witness}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group">
                                     <label class="form-control-label" for="input-price"><p>Witness ID</p></label>
-                                    <input type="text"  name="witness_id"  class="form-control input3" value="{{$clients->witness_id}}" readonly>
+                                    <input type="text"  name="witness_id"  class="form-control input2" value="{{$clients->witness_id}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
@@ -143,19 +143,19 @@
                             <div class="col-4">
                                 <div class="form-group">
                                     <label class="form-control-label" for="input-price"><p>Authorising Officer</p></label>
-                                    <input type="text"  name="nearest_police"  class="form-control input3" value="{{$clients->auth_officer}}" readonly>
+                                    <input type="text"  name="nearest_police"  class="form-control input2" value="{{$clients->auth_officer}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group">
                                     <label class="form-control-label" for="input-price"><p>Releasing Officer</p></label>
-                                    <input type="text"  name="witness_id"  class="form-control input3" value="{{$clients->release_officer}}" readonly>
+                                    <input type="text"  name="witness_id"  class="form-control input2" value="{{$clients->release_officer}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group">
                                     <label class="form-control-label" for="input-price"><p>Date Released</p></label>
-                                    <input type="text"  name="witness_id"  class="form-control input3" value="{{$clients->release_date}}" readonly>
+                                    <input type="text"  name="witness_id"  class="form-control input2" value="{{$clients->release_date}}" readonly>
                                 </div>
                             </div>
 

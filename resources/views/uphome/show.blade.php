@@ -16,9 +16,9 @@
                                 <p class="card-text">UPHOME FUNERAL HOME</p>
                             </div>
                             <div align="center">
-                                Email:uphome@gmail.com
+                                Email:uuphome44@gmail.com
                                 <div>
-                                Tel:0883292332/082398932
+                                Tel:072875392/0729544203
                                 </div>
                                 <div>
                                     Website:www.uphomefuneral.com

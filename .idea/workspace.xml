@@ -21,6 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4b181beb-0590-40d0-8c71-17ae16a4dd7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/clearance/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/clearance/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pay/receipt.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pay/receipt.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/uphome/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/uphome/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +193,7 @@
       <workItem from="1606814584396" duration="35061000" />
       <workItem from="1606980239505" duration="84790000" />
       <workItem from="1607406567768" duration="67621000" />
-      <workItem from="1607699959451" duration="16659000" />
+      <workItem from="1607699959451" duration="17424000" />
     </task>
     <servers />
   </component>
@@ -273,6 +276,10 @@
     </state>
     <state x="277" y="39" width="672" height="160" key="search.everywhere.popup/0.0.1093.574@0.0.1093.574" timestamp="1607929084303" />
     <state x="346" y="49" width="672" height="160" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606919889106" />
+    <state x="269" y="200" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1607929665531">
+      <screen x="0" y="0" width="1093" height="574" />
+    </state>
+    <state x="269" y="200" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1093.574@0.0.1093.574" timestamp="1607929665531" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

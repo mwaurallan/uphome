@@ -88,7 +88,7 @@
                 }
                 .input:focus {
                     outline: none !important;
-                    border:1px solid red;
+                    border:2px solid black;
                     box-shadow: 0 0 10px #719ECE;
                 }
                 .input2 {
