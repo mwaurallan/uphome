@@ -40,12 +40,12 @@
                         <div class="myDiv">
                             <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
                                 <label><p>Name_of_Deceased</p></label>
-                                <input type="text" name="Name_of_Deceased" class="form-control input2" placeholder="" value="{{$clients->name_of_deceased}}" readonly>
+                                <input type="text" name="Name_of_Deceased" class="form-control" placeholder="" value="{{$clients->name_of_deceased}}" readonly>
                                 @include('alerts.feedback', ['field' => 'password'])
                             </div>
                         <div class="form-group">
                             <label><p>File Number</p></label>
-                            <input type="text" name="adm_no" class="form-control input2" placeholder="" value="{{$clients->id}}" readonly>
+                            <input type="text" name="adm_no" class="form-control" placeholder="" value="{{$clients->id}}" readonly>
                         </div>
                         </div>
                         <p style="color:red;">(Relatives to check and comfirm name tag and body before removing)</p>
@@ -78,19 +78,19 @@
                             <div>
                                 <div class="form-group{{ $errors->has('stock') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-stock"><p>County</p></label>
-                                    <input type="text" name="county" id="home_area" class="form-control input2" value="{{$clients->county}}"readonly>
+                                    <input type="text" name="county" id="home_area" class="form-control" value="{{$clients->county}}"readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-price"><p>SubCounty</p></label>
-                                    <input type="text"  name="subcounty" id="home_area" class="form-control input2" value="{{$clients->subcounty}}" readonly>
+                                    <input type="text"  name="subcounty" id="home_area" class="form-control" value="{{$clients->subcounty}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-price"><p>Location</p></label>
-                                    <input type="text"  name="location" id="home_area" class="form-control input2" value="{{$clients->location}}" readonly>
+                                    <input type="text"  name="location" id="home_area" class="form-control" value="{{$clients->location}}" readonly>
                                 </div>
                             </div>
 
@@ -99,19 +99,19 @@
                             <div>
                                 <div class="form-group{{ $errors->has('stock') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-stock"><p>Village</p></label>
-                                    <input type="text" name="village" id="home_area" class="form-control input2" value="{{$clients->village}}"readonly>
+                                    <input type="text" name="village" id="home_area" class="form-control" value="{{$clients->village}}"readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-price"><p>Nearest Shopping Centre</p></label>
-                                    <input type="text"  name="nearest_centre" class="form-control input2" value="{{$clients->nearest_centre}}" readonly>
+                                    <input type="text"  name="nearest_centre" class="form-control" value="{{$clients->nearest_centre}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-price"><p>Nearest Police</p></label>
-                                    <input type="text"  name="nearest_police"  class="form-control input2" value="{{$clients->nearest_police}}" readonly>
+                                    <input type="text"  name="nearest_police"  class="form-control" value="{{$clients->nearest_police}}" readonly>
                                 </div>
                             </div>
 
@@ -121,19 +121,19 @@
                             <div class="col-4">
                                  <div class="form-group">
                                     <label class="form-control-label" for="input-price"><p>Witness</p></label>
-                                    <input type="text"  name="nearest_police"  class="form-control input2" value="{{$clients->witness}}" readonly>
+                                    <input type="text"  name="nearest_police"  class="form-control" value="{{$clients->witness}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group">
                                     <label class="form-control-label" for="input-price"><p>Witness ID</p></label>
-                                    <input type="text"  name="witness_id"  class="form-control input2" value="{{$clients->witness_id}}" readonly>
+                                    <input type="text"  name="witness_id"  class="form-control" value="{{$clients->witness_id}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group">
                                     <label class="form-control-label" for="input-price"><p>Signature</p></label>
-                                    <input type="text"  name="witness_id"  class="form-control input3" value="__________________" readonly>
+                                    <input type="text"  name="witness_id"  class="form-control" value="__________________" readonly>
                                 </div>
                             </div>
 
@@ -143,19 +143,19 @@
                             <div class="col-4">
                                 <div class="form-group">
                                     <label class="form-control-label" for="input-price"><p>Authorising Officer</p></label>
-                                    <input type="text"  name="nearest_police"  class="form-control input2" value="{{$clients->auth_officer}}" readonly>
+                                    <input type="text"  name="nearest_police"  class="form-control" value="{{$clients->auth_officer}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group">
                                     <label class="form-control-label" for="input-price"><p>Releasing Officer</p></label>
-                                    <input type="text"  name="witness_id"  class="form-control input2" value="{{$clients->release_officer}}" readonly>
+                                    <input type="text"  name="witness_id"  class="form-control" value="{{$clients->release_officer}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group">
                                     <label class="form-control-label" for="input-price"><p>Date Released</p></label>
-                                    <input type="text"  name="witness_id"  class="form-control input2" value="{{$clients->release_date}}" readonly>
+                                    <input type="text"  name="witness_id"  class="form-control" value="{{$clients->release_date}}" readonly>
                                 </div>
                             </div>
 
