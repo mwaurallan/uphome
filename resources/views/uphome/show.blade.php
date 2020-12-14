@@ -26,6 +26,9 @@
                                 <div>
                                     Along Nairobi-Nakuru Highway
                                 </div>
+                                <div class="myDiv2">
+                                    <h1>Admission Form</h1>
+                                </div>
 
                             </div>
 
