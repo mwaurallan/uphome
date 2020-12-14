@@ -45,7 +45,8 @@ class ClearanceController extends Controller
             1 => 'LIMURU', 2 => 'KIKUYU', 3 => 'LARI','GITHUNGURI');
 
 
-        $admins=DB::table('bills')->where('id',$id)->first();
+
+
 //       $pay= Payment::query()
 //            ->where('customer_id', '=', $id)
 //           ->latest('id')
@@ -53,15 +54,20 @@ class ClearanceController extends Controller
 //           ->get();
         $results = Payment::latest('id')
             ->where('customer_id','=',$id)->first();
-//       dd($results->id);
+//       dd($results->order_id);
         $rct_id=$results->id;
-
+        $admins=DB::table('bills')->where('id',$results->order_id)->first();
+//        dd($admins->bill_balance);
         $bills =DB::table('admissions')
             ->where('admissions.id',$id)->get();
-
+        if ($admins->bill_balance == null) {
 //     dd($bills);
-
-        return view('clearance.create', compact('admins','bills','counties','subcounties','rct_id'));
+            return view('clearance.create', compact('bills', 'counties', 'subcounties', 'rct_id'));
+        } else{
+                return redirect()
+                    ->route('clearance.index')
+                    ->withStatus('Admissions  has pending balance.');
+            }
     }
 
     /**
