@@ -191,7 +191,9 @@
       <workItem from="1606980239505" duration="84790000" />
       <workItem from="1607406567768" duration="67621000" />
       <workItem from="1607699959451" duration="21851000" />
-      <workItem from="1607963213865" duration="2379000" />
+      <workItem from="1607963213865" duration="5435000" />
+      <workItem from="1607973940792" duration="1102000" />
+      <workItem from="1608051396739" duration="1688000" />
     </task>
     <servers />
   </component>
@@ -269,10 +271,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606498567253" />
-    <state x="277" y="39" width="672" height="160" key="search.everywhere.popup" timestamp="1607963562908">
+    <state x="277" y="39" width="672" height="160" key="search.everywhere.popup" timestamp="1608052335421">
       <screen x="0" y="0" width="1093" height="574" />
     </state>
-    <state x="277" y="39" width="672" height="160" key="search.everywhere.popup/0.0.1093.574@0.0.1093.574" timestamp="1607963562908" />
+    <state x="277" y="39" width="672" height="160" key="search.everywhere.popup/0.0.1093.574@0.0.1093.574" timestamp="1608052335421" />
     <state x="346" y="49" width="672" height="160" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606919889106" />
     <state x="269" y="200" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1607929665531">
       <screen x="0" y="0" width="1093" height="574" />
