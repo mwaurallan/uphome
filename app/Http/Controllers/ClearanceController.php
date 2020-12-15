@@ -53,7 +53,7 @@ class ClearanceController extends Controller
 
        if(is_null($pay)){
            return redirect()
-               ->route('clearance.index')
+               ->route('admission.index')
                ->withStatus('Admission has no active bills');
        }
 
