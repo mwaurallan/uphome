@@ -31,7 +31,7 @@
                                 <th>Date_Admitted</th>
                                 <th>Actions</th>
                                 <th>Clear</th>
-                                <th></th>
+                                <th>Edit</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -54,8 +54,18 @@
                                                 <i class="tim-icons icon-zoom-split"></i>
                                             </a>
                                         </td>
-                                        <td class="td-actions text-right">
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="tim-icons icon-settings-gear-63"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
 
+
+                                                        <a class="dropdown-item" href="{{ route('profile.edit', $client->id) }}">{{ __('Edit') }}</a>
+
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach
