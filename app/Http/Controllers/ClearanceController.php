@@ -50,8 +50,22 @@ class ClearanceController extends Controller
            ->select('payments.*', 'bills.bill_balance')
            ->latest('id')
            ->first();
+
+       if(is_null($pay)){
+           return redirect()
+               ->route('clearance.index')
+               ->withStatus('Admission has no active bills');
+       }
+
+
+        $bills =DB::table('admissions')
+            ->where('admissions.id',$id)->get();
+
         $results = Payment::latest('id')
             ->where('customer_id','=',$id)->first();
+
+        $rct_id=$results->id;
+
         if ($pay->bill_balance == null) {
             return view('clearance.create', compact('bills', 'counties', 'subcounties', 'rct_id'));
         } else{
