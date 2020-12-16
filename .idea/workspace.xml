@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4b181beb-0590-40d0-8c71-17ae16a4dd7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/payments/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payments/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdmissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdmissionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/uphome/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/uphome/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +196,7 @@
       <workItem from="1607963213865" duration="5435000" />
       <workItem from="1607973940792" duration="1102000" />
       <workItem from="1608051396739" duration="4675000" />
-      <workItem from="1608057804201" duration="14479000" />
+      <workItem from="1608057804201" duration="17054000" />
     </task>
     <servers />
   </component>
@@ -273,10 +275,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606498567253" />
-    <state x="277" y="39" width="672" height="160" key="search.everywhere.popup" timestamp="1608114352746">
+    <state x="277" y="39" width="672" height="160" key="search.everywhere.popup" timestamp="1608137566327">
       <screen x="0" y="0" width="1093" height="574" />
     </state>
-    <state x="277" y="39" width="672" height="160" key="search.everywhere.popup/0.0.1093.574@0.0.1093.574" timestamp="1608114352746" />
+    <state x="277" y="39" width="672" height="160" key="search.everywhere.popup/0.0.1093.574@0.0.1093.574" timestamp="1608137566327" />
     <state x="346" y="49" width="672" height="160" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606919889106" />
     <state x="269" y="200" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1607929665531">
       <screen x="0" y="0" width="1093" height="574" />

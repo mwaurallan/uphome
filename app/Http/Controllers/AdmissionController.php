@@ -120,18 +120,13 @@ class AdmissionController extends Controller
      * @param  \App\Admission  $admission
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
         //
-        $id=$_GET;
-//        $_GET['sub1']
+        $id=$id;
+        $admin=Admission::find($id);
 
-//        dd($id);
-
-//        dd($id);
-//        dd($admission);
-        //update($request->all()
-        return view('uphome.edit');
+        return view('uphome.edit',compact('admin'));
     }
 
     /**

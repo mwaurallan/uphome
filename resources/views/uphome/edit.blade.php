@@ -15,19 +15,34 @@
                             @include('alerts.success')
                         <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                             <label>Enter File Number</label>
-                            <input type="text" name="id" class="form-control" value="">
+                            <input type="text" name="id" class="form-control " value="{{$admin->id}}" readonly>
                             @include('alerts.feedback', ['field' => 'name'])
                         </div>
 
 
                             <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                                 <label>permit_no</label>
-                                <input type="text" name="permit_no" class="form-control" value="">
+                                <input type="text" name="permit_no" class="form-control" value="{{$admin->permit_no}}">
                                 @include('alerts.feedback', ['field' => 'name'])
                             </div>
                         <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                             <label>Name(Next Of Kin)s</label>
-                            <input type="text" name="name" class="form-control" value="">
+                            <input type="text" name="name" class="form-control" value="{{$admin->name}}">
+                            @include('alerts.feedback', ['field' => 'name'])
+                        </div>
+                        <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
+                            <label>ID_NO</label>
+                            <input type="text" name="id_no" class="form-control" value="{{$admin->id_no}}">
+                            @include('alerts.feedback', ['field' => 'name'])
+                        </div>
+                        <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
+                            <label>Home_Area</label>
+                            <input type="text" name="home_area" class="form-control" value="{{$admin->home_area}}">
+                            @include('alerts.feedback', ['field' => 'name'])
+                        </div>
+                        <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
+                            <label>Telephone_Number</label>
+                            <input type="text" name="tel_no" class="form-control" value="{{$admin->tel_no}}">
                             @include('alerts.feedback', ['field' => 'name'])
                         </div>
 
