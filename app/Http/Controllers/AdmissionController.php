@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Symfony\Component\Console\Input\Input;
 
 class AdmissionController extends Controller
 {
@@ -119,9 +120,18 @@ class AdmissionController extends Controller
      * @param  \App\Admission  $admission
      * @return \Illuminate\Http\Response
      */
-    public function edit(Admission $admission)
+    public function edit()
     {
         //
+        $id=$_GET;
+//        $_GET['sub1']
+
+//        dd($id);
+
+//        dd($id);
+//        dd($admission);
+        //update($request->all()
+        return view('uphome.edit');
     }
 
     /**
@@ -134,6 +144,24 @@ class AdmissionController extends Controller
     public function update(Request $request, Admission $admission)
     {
         //
+     $id=$request->id;
+//        $url = $request->fullUrl();
+//        dd($id);
+        $klijent = Admission::find($id);
+
+        $klijent->update($request->all());
+        $permit = $request->get('permit_no');
+//        dd($permit);
+
+//        $request->merge(['password' => Hash::make($request->get('password'))]);
+
+//        $request->except([$hasPassword ? '' : 'password']);
+
+//        $admission->update($request->all());
+
+        return redirect()->route('admission.index')->withStatus('Admission successfully updated.');
+
+
     }
 
     /**

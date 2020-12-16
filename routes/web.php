@@ -43,6 +43,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('print2/{id}',"PaymentController@print");
     Route::get('print3/{id}',"PaymentController@receipt");
     Route::get('print4/{id}',"ClearanceController@print");
+    Route::get('print6/{id}', "AdmissionController@edit");
     Route::get('print5/{id}',"ClearanceController@print5");
 //    Route::get('/anyUrl/{id}', 'controller@function');
     Route::get('pay/{id}',"PaymentController@display");
@@ -70,7 +71,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('clients/{client}/transactions/add', ['as' => 'clients.transactions.add', 'uses' => 'ClientController@addtransaction']);
 
     Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
+    Route::get('admin', ['as' => 'admin.edit', 'uses' => 'AdmissionController@edit']);
+
     Route::match(['put', 'patch'], 'profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
+    Route::match(['put', 'patch'], 'admin', ['as' => 'admin.update', 'uses' => 'AdmissionController@update']);
     Route::match(['put', 'patch'], 'profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
 
