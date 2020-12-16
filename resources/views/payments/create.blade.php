@@ -28,7 +28,7 @@
                @include('alerts.feedback', ['field' => 'home_area'])
            </div>
            <div class="form-group {{ $errors->has('customer_email') ? 'has-error' : '' }}">
-               Customer email
+
                <input type="hidden" name="customer_email" class="form-control"
                       value="{{ old('customer_email') }}">
                @if($errors->has('customer_email'))
@@ -42,22 +42,22 @@
 
            <div class="card">
                <div class="card-header">
-                   Products
+                   Services
                </div>
 
                <div class="card-body">
                    <table class="table" id="products_table">
                        <thead>
                        <tr>
-                           <th>Product</th>
-                           <th>Quantity</th>
+                           <th>Service</th>
+                           <th>Amount</th>
                        </tr>
                        </thead>
                        <tbody>
                        <tr id="product0">
                            <td>
                                <select name="products[]" class="form-control">
-                                   <option value="">-- choose product --</option>
+                                   <option value="">-- choose service bill --</option>
                                    @foreach ($products as $product)
                                        <option value="{{ $product->id }}">
                                            {{ $product->name }} (Ksh{{ number_format($product->price, 2) }})
