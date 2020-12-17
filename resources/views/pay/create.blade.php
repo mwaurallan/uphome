@@ -68,7 +68,7 @@
            <div class="form-group {{ $errors->has('amount_paid') ? 'has-error' : '' }}">
                Amount Paid
                <input type="text" name="amount_paid" class="form-control"
-                      value="1">
+                      value="{{$admins->bill_balance}}">
                @if($errors->has('amount_paid'))
                    <em class="invalid-feedback">
                        {{ $errors->first('amount_paid') }}

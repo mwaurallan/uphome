@@ -60,7 +60,7 @@
                                                     <i class="tim-icons icon-settings-gear-63"></i>
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                    <a class="dropdown-item" href="{{ route('admin.edit',$client->id) }}">{{ __('Edit') }}</a>
+                                                    <a class="dropdown-item" href="{{ route('admin.edit',$client->id) }}"><p>{{ __('Edit') }}</p></a>
                                                 </div>
                                             </div>
                                         </td>

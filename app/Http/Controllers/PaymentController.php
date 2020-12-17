@@ -39,6 +39,7 @@ class PaymentController extends Controller
     public function print( $id)
     {
         //
+//        dd($id);
 
         $admins=DB::table('bills')->where('id',$id)->first();
 //        dd($admins);
@@ -46,8 +47,12 @@ class PaymentController extends Controller
             ->join('services', 'services.id', '=', 'bill__services.product_id')
             ->select('bill__services.*', 'services.name')
             ->where('bill__services.order_id',$id)->get();
-
-//     dd($bills);
+//
+//
+//     var_dump($admins->bill_balance);
+        if ($admins->bill_balance==0){
+            return redirect()->route('services.index')->withStatus('Bill has zero balance.');
+        }
         return view('pay.create', compact('admins','bills'));
     }
     public function display($id)
