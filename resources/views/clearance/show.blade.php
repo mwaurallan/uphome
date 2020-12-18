@@ -52,7 +52,7 @@
 
                         <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                             <label  class="form-control-label" for="input-name"><p>Next Of Kin</p></label>
-                            <input type="text" name="name" class="form-control" placeholder="Name" value="{{$clients->location}}" readonly>
+                            <input type="text" name="next_of_kin" class="form-control" placeholder="Name" value="{{$clients->next_of_kin}}" readonly>
                             @include('alerts.feedback', ['field' => 'name'])
                         </div>
 
@@ -65,7 +65,7 @@
 
                         <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
                             <label><p>Payment Receipt No:</p></label>
-                            <input type="text" name="rct_no" class="form-control" placeholder="Payment Receipt No" value="{{$clients->witness}}" readonly>
+                            <input type="text" name="rct_no" class="form-control" placeholder="Payment Receipt No" value="{{$clients->rct_no}}" readonly>
                             @include('alerts.feedback', ['field' => 'old_password'])
                         </div>
                         <div class="form-group{{ $errors->has('stock_defective') ? ' has-danger' : '' }}">
