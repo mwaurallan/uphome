@@ -161,8 +161,7 @@
 
                         </div>
 
-                        I have read and understood all the terms and conditions and agreed to abide
-                            by them Sign______________________________________
+                       <p>Next Of Kin Witness:  Name_______________________Sign_____________________</p>
                     </div>
 
                 </form>
