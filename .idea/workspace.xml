@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4b181beb-0590-40d0-8c71-17ae16a4dd7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClearanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClearanceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/clearance/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/clearance/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/uphome/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/uphome/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,11 +37,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -150,11 +154,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/uphome" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -196,7 +203,11 @@
       <workItem from="1607973940792" duration="1102000" />
       <workItem from="1608051396739" duration="4675000" />
       <workItem from="1608057804201" duration="18703000" />
-      <workItem from="1608223812066" duration="5901000" />
+      <workItem from="1608223812066" duration="9591000" />
+      <workItem from="1608338170250" duration="853000" />
+      <workItem from="1608362874839" duration="591000" />
+      <workItem from="1608364288270" duration="5789000" />
+      <workItem from="1608408977507" duration="7231000" />
     </task>
     <servers />
   </component>
@@ -214,76 +225,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="220" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608095353877">
-      <screen x="0" y="0" width="1093" height="574" />
-    </state>
-    <state x="220" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1093.574@0.0.1093.574" timestamp="1608095353877" />
-    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1606315319005" />
-    <state x="377" y="80" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608082370745">
-      <screen x="0" y="0" width="1093" height="574" />
-    </state>
-    <state x="377" y="80" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1093.574@0.0.1093.574" timestamp="1608082370745" />
-    <state x="471" y="101" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606980389721" />
-    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1607451784366">
-      <screen x="0" y="0" width="1093" height="574" />
-    </state>
-    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1093.574@0.0.1093.574" timestamp="1607451784366" />
-    <state x="370" y="84" key="FileChooserDialogImpl" timestamp="1607359442949">
-      <screen x="0" y="0" width="1093" height="574" />
-    </state>
-    <state x="370" y="84" key="FileChooserDialogImpl/0.0.1093.574@0.0.1093.574" timestamp="1607359442949" />
-    <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606315481698" />
-    <state width="769" height="2" key="GridCell.Tab.0.bottom" timestamp="1607614031555">
-      <screen x="0" y="0" width="1093" height="574" />
-    </state>
-    <state width="769" height="2" key="GridCell.Tab.0.bottom/0.0.1093.574@0.0.1093.574" timestamp="1607614031555" />
-    <state width="905" height="2" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606829821080" />
-    <state width="769" height="2" key="GridCell.Tab.0.center" timestamp="1607614031530">
-      <screen x="0" y="0" width="1093" height="574" />
-    </state>
-    <state width="769" height="2" key="GridCell.Tab.0.center/0.0.1093.574@0.0.1093.574" timestamp="1607614031530" />
-    <state width="905" height="2" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606829821079" />
-    <state width="769" height="2" key="GridCell.Tab.0.left" timestamp="1607614031468">
-      <screen x="0" y="0" width="1093" height="574" />
-    </state>
-    <state width="769" height="2" key="GridCell.Tab.0.left/0.0.1093.574@0.0.1093.574" timestamp="1607614031468" />
-    <state width="905" height="2" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606829821041" />
-    <state width="769" height="2" key="GridCell.Tab.0.right" timestamp="1607614031543">
-      <screen x="0" y="0" width="1093" height="574" />
-    </state>
-    <state width="769" height="2" key="GridCell.Tab.0.right/0.0.1093.574@0.0.1093.574" timestamp="1607614031543" />
-    <state width="905" height="2" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606829821079" />
-    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1605946226396">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1605946226396" />
-    <state x="541" y="241" width="316" height="246" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1606849025202">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="541" y="241" width="316" height="246" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1366.728@0.0.1366.728" timestamp="1606849025202" />
-    <state x="526" y="137" width="700" height="454" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1606828822079">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="526" y="137" width="700" height="454" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1606828822079" />
-    <state x="271" y="92" width="1003" height="544" maximized="true" key="dock-window-1" timestamp="1605537872298">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="271" y="92" width="1003" height="544" maximized="true" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1605537872298" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1606498567253">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1606498567253" />
-    <state x="277" y="39" width="672" height="160" key="search.everywhere.popup" timestamp="1608286440079">
-      <screen x="0" y="0" width="1093" height="574" />
-    </state>
-    <state x="277" y="39" width="672" height="160" key="search.everywhere.popup/0.0.1093.574@0.0.1093.574" timestamp="1608286440079" />
-    <state x="346" y="49" width="672" height="160" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606919889106" />
-    <state x="269" y="200" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1607929665531">
-      <screen x="0" y="0" width="1093" height="574" />
-    </state>
-    <state x="269" y="200" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1093.574@0.0.1093.574" timestamp="1607929665531" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

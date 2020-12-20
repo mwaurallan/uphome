@@ -9,6 +9,7 @@
 
         <title>{{ $page }} - {{ config('app.name') }}</title>
 
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.23.0/slimselect.min.css" rel="stylesheet">
@@ -21,6 +22,7 @@
         <link href="{{ asset('assets') }}/css/theme.css" rel="stylesheet" />
         <link href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
         <head>
             <style>
                 .center {
@@ -68,10 +70,8 @@
                     font-size: 1.5em;
                 }
                 h1{
-                    font-size: 2.4em;
+                    font-size: 1.4em;
                     color: green;
-
-
                 }
                 h2{
                     color: #00b290;
@@ -83,7 +83,7 @@
                 textarea
                 {
                     font-family:"Times New Roman", Times, serif;
-                    font-size: 16px;
+                    background-color: #eee;
                     border:solid 1px #ccc;
                 }
                 .input:focus {
@@ -94,6 +94,7 @@
                 .input2 {
                     outline: none !important;
                     border:1px solid red;
+                    font-size: 17px;
                     box-shadow: 0 0 10px #719ECE;
                 }
                 .input3 {
@@ -108,11 +109,22 @@
                 }
                 .myDiv2{
                     color: #00bf9a;
+                    font-size: 20px;
+
+                }
+                .myDiv3{
+                    border: 3px outset red;
+                    background-color: lightblue;
+                    text-align: center;
                 }
                 img {
                     border-radius: 8px;
                 }
             </style>
+
+
+
+
 
 
     </head>
