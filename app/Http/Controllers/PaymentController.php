@@ -114,7 +114,7 @@ class PaymentController extends Controller
             ->select('bill__services.*', 'services.name')
             ->where('bill__services.order_id',$order_id)->get();
             $total=$orders->sum('quantity');
-//        dd($clients);
+//        dd($bills);
 
         return view('pay.receipt', compact('bills','clients','orders','pays','total'));
     }

@@ -24,23 +24,35 @@
                        <div>
                            Along Nairobi-Nakuru Highway
                        </div>
+                       <div class="myDiv2">
+                           <h1>Official Receipt</h1>
+                       </div>
                    </div>
                </div>
            </div>
        </div>
                <div class="card-body">
+                   <table align="center">
+                       <tbody>
+                       <tr>
+
+                           <td> <h1>Rct Number::{{$clients->id}}</h1></td>
+                           <td><h1></h1></td>
+                           <td> <h1>Receipt Date:{{$bills[0]->payment_date}}</h1></td>
+                       </tr>
+                       </tbody>
+                   </table>
                    <table class="table" id="products_table">
                        <thead style="background-color:magenta">
-                       <td>Received From:{{$clients->name}} </td><td>Name Of Deceased:{{$clients->name_of_deceased}}::Payment Date--{{$bills[0]->payment_date}}</td>
-                       <thead> <td>Bill_Total --{{$pays->bill_total}}</td><td>Amount_Paid--{{$bills[0]->amount_paid}}(Balance--{{$pays->bill_balance}}) </td></thead>
+                       <td><h1>Received From:{{$clients->name}}</h1> </td><td><h1>Name Of Deceased:{{$clients->name_of_deceased}}::</h1></td>
+                       <thead> <td><h1>Bill_Total --{{number_format($pays->bill_total,0)}}</h1></td><td><h1>Amount_Paid->{{number_format($bills[0]->amount_paid,0)}} </h1></td></thead>
 
                       ----
                         <p></p>
                        </thead>
 
                        <tbody>
-                    <h1>Receipt Details</h1>
-                    <p>Rct Number::{{$clients->id}}</p>
+
                        <tr>
 
                        </tr>
@@ -60,7 +72,12 @@
 
 
                            @endforeach
-                    <tr><td><p>Receipt Total</p></td><td><p>{{number_format($total,2)}}</p></td></tr>
+                    <tr><td><p>Receipt Total</p></td><td><p>{{number_format($total,2)}}</p></td>
+                    </tr>
+                       <tr>
+                           <td><p>Receipt Balance</p></td>
+                           <td><h1>{{number_format($pays->bill_balance,0)}}</h1></td>
+                       </tr>
 
                        <tr id="product1"></tr>
 
