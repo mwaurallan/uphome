@@ -18,7 +18,7 @@
                         <div align="center">
                             Email:uuphome44@gmail.com
                             <div>
-                                Tel:072875392/0729544203
+                                Tel:0721875392/0729544203
                             </div>
                             <div>
                                 Website:www.uphomefuneral.com

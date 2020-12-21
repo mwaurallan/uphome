@@ -17,7 +17,7 @@
                             <div align="center">
                                 Email:uuphome44@gmail.com
                                 <div>
-                                Tel:072875392/0729544203
+                                Tel:0721875392/0729544203
                                 </div>
                                 <div>
                                     Website:www.uphomefuneral.com
@@ -38,58 +38,91 @@
 
                     <div class="card-body">
                         <div class="myDiv">
-                            <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
-                                <label><p>Name_of_Deceased</p></label>
-                                <input type="text" name="Name_of_Deceased" class="form-control" placeholder="" value="{{$clients->name_of_deceased}}" readonly>
-                                @include('alerts.feedback', ['field' => 'password'])
-                            </div>
-                        <div class="form-group">
-                            <label><p>File Number</p></label>
-                            <input type="text" name="adm_no" class="form-control" placeholder="" value="{{$clients->id}}" readonly>
+                            <table class="table table-striped">
+                                <tbody>
+                                <tr>
+                                    <th scope="row"><h2>Deceased Name</h2></th>
+                                    <td><div class="form-group"><h1><input type="text" class="form-control" value=" {{$clients->name_of_deceased}}"></h1></div></td>
+                                    <td><h2>Adm No:</h2></td>
+                                    <td><div class="form-group">
+                                    <h1><input type="text" class="form-control" value=" {{$clients->id}}"></h1></div></td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
+                        <div class="myDiv2">
+                        <h1 style="color:red;">(Relatives to check and comfirm name tag and body before removing)</h1>
                         </div>
-                        <p style="color:red;">(Relatives to check and comfirm name tag and body before removing)</p>
+{{--                        <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">--}}
+{{--                            <label  class="form-control-label" for="input-name"><p>Next Of Kin</p></label>--}}
+{{--                            <input type="text" name="next_of_kin" class="form-control" placeholder="Name" value="{{$clients->next_of_kin}}" readonly>--}}
+{{--                            @include('alerts.feedback', ['field' => 'name'])--}}
+{{--                        </div>--}}
+                        <table class="table table-striped">
+                            <tbody>
+                            <tr>
+                                <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
+                                    <td><h2>Next Of Kin</h2></td>
+                                    <td><input type="text" name="tel_no" class="form-control" placeholder="Telephone Number" value="{{$clients->next_of_kin}}" required></td>
+                                    @include('alerts.feedback', ['field' => 'old_password'])
+                                </div>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-striped">
+                            <tbody>
+                            <tr>
+                                <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
+                                    <td><h2>ID Number:</h2></td>
+                                    <td><input type="text" name="tel_no" class="form-control" placeholder="Telephone Number" value="{{$clients->id_no }}" required></td>
+                                    @include('alerts.feedback', ['field' => 'old_password'])
+                                </div>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-striped">
+                            <tbody>
+                            <tr>
+                                <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
+                                    <td><h2>Receipt No:</h2></td>
+                                    <td><input type="text" name="tel_no" class="form-control" placeholder="Telephone Number" value="{{$clients->rct_no}}" required></td>
+                                    @include('alerts.feedback', ['field' => 'old_password'])
+                                </div>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-striped">
+                            <tbody>
+                            <tr>
+                                <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
+                                    <td><h2>Permit No:</h2></td>
+                                    <td><input type="text" name="tel_no" class="form-control" placeholder="Telephone Number" value="{{$clients->permit_no}}" required></td>
+                                    @include('alerts.feedback', ['field' => 'old_password'])
+                                </div>
+                            </tr>
+                            </tbody>
+                        </table>
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                            <label  class="form-control-label" for="input-name"><p>Next Of Kin</p></label>
-                            <input type="text" name="next_of_kin" class="form-control" placeholder="Name" value="{{$clients->next_of_kin}}" readonly>
-                            @include('alerts.feedback', ['field' => 'name'])
-                        </div>
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
-                            <label><p>ID Number:</p></label>
-                         <input type="text" name="id_no" class="form-control" placeholder="ID Number" value="{{ $clients->id_no }}" readonly>
-                            @include('alerts.feedback', ['field' => 'email'])
-                        </div>
-
-
-                        <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
-                            <label><p>Payment Receipt No:</p></label>
-                            <input type="text" name="rct_no" class="form-control" placeholder="Payment Receipt No" value="{{$clients->rct_no}}" readonly>
-                            @include('alerts.feedback', ['field' => 'old_password'])
-                        </div>
-                        <div class="form-group{{ $errors->has('stock_defective') ? ' has-danger' : '' }}">
-                            <label><p>Disposal Permit No:</p></label>
-                            <input type="text" name="permit_no" id="subcounty" class="form-control" value="{{$clients->permit_no}}" readonly>
-                        </div>
+                      <div class="myDiv">
                         <p style="color:red;">BODY DESTINATION</p>
+                        </div>
 
                         <div class="row">
                             <div>
                                 <div class="form-group{{ $errors->has('stock') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-stock"><p>County</p></label>
+                                   <h1 style="color:blue;">County</h1>
                                     <input type="text" name="county" id="home_area" class="form-control" value="{{$clients->county}}"readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-price"><p>SubCounty</p></label>
+                                    <h1 style="color:blue;">SubCounty</h1>
                                     <input type="text"  name="subcounty" id="home_area" class="form-control" value="{{$clients->subcounty}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-price"><p>Location</p></label>
+                                    <h1 style="color:blue;">Location</h1>
                                     <input type="text"  name="location" id="home_area" class="form-control" value="{{$clients->location}}" readonly>
                                 </div>
                             </div>
@@ -98,47 +131,58 @@
                         <div class="row">
                             <div>
                                 <div class="form-group{{ $errors->has('stock') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-stock"><p>Village</p></label>
+                                    <h1 style="color:blue;">Village</h1>
                                     <input type="text" name="village" id="home_area" class="form-control" value="{{$clients->village}}"readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-price"><p>Nearest Shopping Centre</p></label>
+                                    <h1 style="color:blue;">Nearest Shopping Centre</h1>
                                     <input type="text"  name="nearest_centre" class="form-control" value="{{$clients->nearest_centre}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="input-price"><p>Nearest Police</p></label>
+                                    <h1 style="color:blue;">Nearest Police</h1>
                                     <input type="text"  name="nearest_police"  class="form-control" value="{{$clients->nearest_police}}" readonly>
                                 </div>
                             </div>
 
                         </div>
-                        <p style="color:red;">Witnesses</p>
+                        <div>
+                            -
+                        </div>
+                        <div>
+                           <h1 style="color:orangered;"> SIGNED__________________________   DATE__________________________________</h1>
+                        </div>
+                        <div class="myDiv">
+
+                        <p style="color:red;">WITNESSES</p>
+                        </div>
                         <div class="row">
                             <div class="col-4">
                                  <div class="form-group">
-                                    <label class="form-control-label" for="input-price"><p>Witness</p></label>
+                                   <h1 style="color:blue;">Witness</h1>
                                     <input type="text"  name="nearest_police"  class="form-control" value="{{$clients->witness}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-price"><p>Witness ID</p></label>
+                                    <h1 style="color:blue;">Witness ID</h1>
                                     <input type="text"  name="witness_id"  class="form-control" value="{{$clients->witness_id}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group">
-                                    <label class="form-control-label" for="input-price"><p>Signature</p></label>
+                                   <h1 style="color:blue;">Signature</h1></label>
                                     <input type="text"  name="witness_id"  class="form-control" value="__________________" readonly>
                                 </div>
                             </div>
 
                         </div>
+                        <div class="myDiv">
                         <p style="color:red;">Uphomes Official Details</p>
+                        </div>
                         <div class="row">
                             <div class="col-4">
                                 <div class="form-group">
@@ -161,7 +205,7 @@
 
                         </div>
 
-                       <p>Next Of Kin:  Name_______________________Sign____________________________________</p>
+
                     </div>
 
                 </form>
