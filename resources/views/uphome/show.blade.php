@@ -67,34 +67,46 @@
                     <tr>
                         <th scope="row"><h1>Name</h1></th>
                         <td><div class="form-group"><h1><input type="text" class="form-control" value=" {{$admins->name}}"></h1></div></td>
-                        <td><p>ID No:</p></td>
-                        <td><div class="form-group">
-                        <p><input type="text" class="form-control" value=" {{$admins->id_no}}"></p></div></td>
                      </tr>
+                        <tr>
+                            <td><p>ID No:</p></td>
+                            <td><div class="form-group">
+                            <p><input type="text" class="form-control" value=" {{$admins->id_no}}"></p></div></td>
+                        </tr>
+                        <tr>
+                            <td><label><p>Tel No:</p></label></td>
+                            <td><input type="text"  class="form-control" size="40" value="{{$admins->tel_no}}" required></td>
+
+                        </tr>
+                        <tr>
+                            <td><label><p>Tel No2:</p></label></td>
+                            <td><input type="text"  class="form-control" size="47" value="{{$admins->tel_no2}}" required></td>
+
+                        </tr>
                 </tbody>
                 </table>
-                    <table class="table table-striped">
-                        <tbody>
-                        <tr>
-                            <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
-                                <td><label><p>Tel No:</p></label></td>
-                                <td><input type="text"  class="form-control" size="40" value="{{$admins->tel_no}}" required></td>
-                                @include('alerts.feedback', ['field' => 'old_password'])
-                            </div>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-striped">
-                        <tbody>
-                        <tr>
-                            <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
-                                <td><label><p>Tel No2:</p></label></td>
-                                <td><input type="text"  class="form-control" size="47" value="{{$admins->tel_no2}}" required></td>
-                                @include('alerts.feedback', ['field' => 'old_password'])
-                            </div>
-                        </tr>
-                        </tbody>
-                    </table>
+{{--                    <table class="table table-striped">--}}
+{{--                        <tbody>--}}
+{{--                        <tr>--}}
+{{--                            <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">--}}
+{{--                                <td><label><p>Tel No:</p></label></td>--}}
+{{--                                <td><input type="text"  class="form-control" size="40" value="{{$admins->tel_no}}" required></td>--}}
+{{--                                @include('alerts.feedback', ['field' => 'old_password'])--}}
+{{--                            </div>--}}
+{{--                        </tr>--}}
+{{--                        </tbody>--}}
+{{--                    </table>--}}
+{{--                    <table class="table table-striped">--}}
+{{--                        <tbody>--}}
+{{--                        <tr>--}}
+{{--                            <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">--}}
+{{--                                <td><label><p>Tel No2:</p></label></td>--}}
+{{--                                <td><input type="text"  class="form-control" size="47" value="{{$admins->tel_no2}}" required></td>--}}
+{{--                                @include('alerts.feedback', ['field' => 'old_password'])--}}
+{{--                            </div>--}}
+{{--                        </tr>--}}
+{{--                        </tbody>--}}
+{{--                    </table>--}}
                     <table class="table table-striped">
                         <tbody>
                         <tr>
@@ -112,15 +124,6 @@
                             <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
                                 <td><label><p>Permit No:</p></label></td>
                                 <td><input type="text" name="tel_no" class="form-control" size="60"  value="{{$admins->permit_no}}" required></td>
-                                @include('alerts.feedback', ['field' => 'old_password'])
-                            </div>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-striped">
-                        <tbody>
-                        <tr>
-                            <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
                                 <td><label><p>Relationship:</p></label></td>
                                 <td><input type="text" name="tel_no" class="form-control" size="60"  value="{{$admins->relationship}}" required></td>
                                 @include('alerts.feedback', ['field' => 'old_password'])
@@ -128,30 +131,17 @@
                         </tr>
                         </tbody>
                     </table>
-{{--                    <div class="row">--}}
-{{--                        <div>--}}
-{{--                            <div class="form-group{{ $errors->has('stock') ? ' has-danger' : '' }}">--}}
-{{--                                <label class="form-control-label" for="input-stock"><p>Date Admitted</p></label>--}}
-{{--                                <input type="text" name="county" id="home_area" class="form-control" value="{{$admins->date_admitted}}"required>--}}
-
-
+{{--                    <table class="table table-striped">--}}
+{{--                        <tbody>--}}
+{{--                        <tr>--}}
+{{--                            <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">--}}
+{{--                                <td><label><p>Relationship:</p></label></td>--}}
+{{--                                <td><input type="text" name="tel_no" class="form-control" size="60"  value="{{$admins->relationship}}" required></td>--}}
+{{--                                @include('alerts.feedback', ['field' => 'old_password'])--}}
 {{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-4">--}}
-{{--                            <div class="form-group{{ $errors->has('stock_defective') ? ' has-danger' : '' }}">--}}
-{{--                                <label class="form-control-label" for="input-stock_defective"><p>Permit No:</p></label>--}}
-{{--                                <input type="text" name="subcounty" id="subcounty" class="form-control" value="{{$admins->permit_no}}">--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-4">--}}
-{{--                            <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">--}}
-{{--                                <label class="form-control-label" for="input-price"><p>Relationship</p></label>--}}
-{{--                                <input type="text"  name="location" id="home_area" class="form-control" value="{{$admins->relationship}}">--}}
-
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-{{--                    </div>--}}
+{{--                        </tr>--}}
+{{--                        </tbody>--}}
+{{--                    </table>--}}
                     <div align="center" class="myDiv2">
                     <p style="color:red;">WITNESSED BY :CLERK AT UPHOME</p>
                     </div>
