@@ -44,9 +44,14 @@
                             <tr>
                                 <th scope="row"><h1>Adm_No</h1></th>
                                 <td><div class="form-group"><h1><input type="text" class="form-control" value=" {{$admins->id}}"></h1></div></td>
+{{--                                <td><h1>Name_Of_Deceased</h1></td>--}}
+{{--                                <td><div class="form-group">--}}
+{{--                                <h1><input type="text" class="form-control" value=" {{$admins->name_of_deceased}}"></h1></div></td>--}}
+                            </tr>
+                            <tr>
                                 <td><h1>Name_Of_Deceased</h1></td>
                                 <td><div class="form-group">
-                                <h1><input type="text" class="form-control" value=" {{$admins->name_of_deceased}}"></h1></div></td>
+                                        <h1><input type="text" class="form-control" value=" {{$admins->name_of_deceased}}"></h1></div></td>
                             </tr>
                             </tbody>
                         </table>
@@ -55,30 +60,39 @@
 {{--                    <h1 style="color:red;"> Next Of Kin Details</h1>--}}
 {{--                    </div>--}}
                     <div align="center" class="myDiv2">
-                        <h1 style="color:red;">Next Of Kin Details</h1>
+                        <p style="color:red;">Next Of Kin Details</p>
                     </div>
                     <table class="table table-striped">
                         <tbody>
                     <tr>
                         <th scope="row"><h1>Name</h1></th>
                         <td><div class="form-group"><h1><input type="text" class="form-control" value=" {{$admins->name}}"></h1></div></td>
-                        <td><h1>ID No:</h1></td>
+                        <td><p>ID No:</p></td>
                         <td><div class="form-group">
-                        <h1><input type="text" class="form-control" value=" {{$admins->id_no}}"></h1></div></td>
+                        <p><input type="text" class="form-control" value=" {{$admins->id_no}}"></p></div></td>
                      </tr>
                 </tbody>
                 </table>
-
-                    .
                     <table class="table table-striped">
                         <tbody>
                         <tr>
-                    <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
-                        <td><label><p>Tel No:</p></label></td>
-                       <td><input type="text" name="tel_no" class="form-control" size="40" value="{{$admins->tel_no}}" required></td>
-                        @include('alerts.feedback', ['field' => 'old_password'])
-                    </div>
-                    </tr>
+                            <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
+                                <td><label><p>Tel No:</p></label></td>
+                                <td><input type="text"  class="form-control" size="40" value="{{$admins->tel_no}}" required></td>
+                                @include('alerts.feedback', ['field' => 'old_password'])
+                            </div>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-striped">
+                        <tbody>
+                        <tr>
+                            <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
+                                <td><label><p>Tel No2:</p></label></td>
+                                <td><input type="text"  class="form-control" size="47" value="{{$admins->tel_no2}}" required></td>
+                                @include('alerts.feedback', ['field' => 'old_password'])
+                            </div>
+                        </tr>
                         </tbody>
                     </table>
                     <table class="table table-striped">
@@ -86,7 +100,7 @@
                         <tr>
                             <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
                                 <td><label><p>Date:</p></label></td>
-                                <td><input type="text" name="tel_no" class="form-control" size="30"  value="{{$admins->date_admitted}}" required></td>
+                                <td><input type="text" class="form-control" size="30"  value="{{$admins->date_admitted}}" required></td>
                                 @include('alerts.feedback', ['field' => 'old_password'])
                             </div>
                         </tr>
@@ -108,7 +122,7 @@
                         <tr>
                             <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
                                 <td><label><p>Relationship:</p></label></td>
-                                <td><input type="text" name="tel_no" class="form-control" size="85"  value="{{$admins->relationship}}" required></td>
+                                <td><input type="text" name="tel_no" class="form-control" size="60"  value="{{$admins->relationship}}" required></td>
                                 @include('alerts.feedback', ['field' => 'old_password'])
                             </div>
                         </tr>
@@ -139,7 +153,7 @@
 
 {{--                    </div>--}}
                     <div align="center" class="myDiv2">
-                    <h1 style="color:red;">WITNESSED BY :CLERK AT UPHOME</h1>
+                    <p style="color:red;">WITNESSED BY :CLERK AT UPHOME</p>
                     </div>
                     <div class="row">
                         <div class="col-4">
@@ -156,7 +170,7 @@
 
                     </div>
                     <div align="center" class="myDiv2">
-                    <h1 style="color:red;">IMPORTANT INSTRUCTIONS</h1>
+                    <p style="color:red;">IMPORTANT INSTRUCTIONS</p>
                     </div>
                     <div class="form-group">
                                 <textarea  rows="3" cols="100" class="input2">

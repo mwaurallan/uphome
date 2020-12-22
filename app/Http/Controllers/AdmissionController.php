@@ -63,6 +63,7 @@ class AdmissionController extends Controller
     public function store(Request $request)
     {
         //
+//        dd($request);
         $curr_date=$request->date_admitted;
         $curr_date=Carbon::now();
 
@@ -78,9 +79,10 @@ class AdmissionController extends Controller
         $admit->home_area = $request->home_area;
         $admit->tel_no = $request->tel_no;
         //$admit->date_admitted= $request->date_admitted;
-        $admit->date_admitted=$curr_date;
+        $admit->date_admitted=$request->date_admitted;
         $admit->permit_no = $request->permit_no;
         $admit->relationship = $request->relationship;
+        $admit->tel_no2=$request->tel_no2;
         $admit->user_name=$user;
         $admit->save();
         return redirect()

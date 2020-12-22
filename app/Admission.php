@@ -16,6 +16,7 @@ class Admission extends Model
         'date_admitted',
         'permit_no',
         'relationship',
+        'tel_no2',
     ];
     public function payments()
     {
