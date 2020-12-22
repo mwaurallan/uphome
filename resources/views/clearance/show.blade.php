@@ -41,19 +41,19 @@
                             <table class="table table-striped">
                                 <tbody>
                                 <tr>
-                                    <td><h2>Adm No:</h2></td>
+                                    <td><p>Adm No:</p></td>
                                     <td><div class="form-group">
-                                    <h1><input type="text" class="form-control" value=" {{$clients->adm_no}}"></h1></div></td>
+                                    <p><input type="text" class="form-control" value=" {{$clients->adm_no}}"></p></div></td>
                                 </tr>
                                 <tr>
-                                    <th scope="row"><h2>Deceased Name</h2></th>
-                                    <td><div class="form-group"><h1><input type="text" class="form-control" value=" {{$clients->name_of_deceased}}"></h1></div></td>
+                                    <th scope="row"><p>Deceased Name</p></th>
+                                    <td><div class="form-group"><p><input type="text" class="form-control" value=" {{$clients->name_of_deceased}}"></p></div></td>
                                 </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="myDiv2">
-                        <h1 style="color:red;">(Relatives to check and comfirm name tag and body before removing)</h1>
+                        <p style="color:red;">(Relatives to check and comfirm name tag and body before removing)</p>
                         </div>
 {{--                        <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">--}}
 {{--                            <label  class="form-control-label" for="input-name"><p>Next Of Kin</p></label>--}}
@@ -64,7 +64,7 @@
                             <tbody>
                             <tr>
                                 <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
-                                    <td><h2>Next Of Kin</h2></td>
+                                    <td><p>Next Of Kin</p></td>
                                     <td><input type="text" name="tel_no" class="form-control" placeholder="Telephone Number" value="{{$clients->next_of_kin}}" required></td>
                                     @include('alerts.feedback', ['field' => 'old_password'])
                                 </div>
@@ -75,7 +75,7 @@
                             <tbody>
                             <tr>
                                 <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
-                                    <td><h2>ID Number:</h2></td>
+                                    <td><p>ID Number:</p></td>
                                     <td><input type="text" name="tel_no" class="form-control" placeholder="Telephone Number" value="{{$clients->id_no }}" required></td>
                                     @include('alerts.feedback', ['field' => 'old_password'])
                                 </div>
@@ -86,7 +86,7 @@
                             <tbody>
                             <tr>
                                 <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
-                                    <td><h2>Receipt No:</h2></td>
+                                    <td><p>Receipt No:</p></td>
                                     <td><input type="text" name="tel_no" class="form-control" placeholder="Telephone Number" value="{{$clients->rct_no}}" required></td>
                                     @include('alerts.feedback', ['field' => 'old_password'])
                                 </div>
@@ -97,7 +97,7 @@
                             <tbody>
                             <tr>
                                 <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
-                                    <td><h2>Permit No:</h2></td>
+                                    <td><p>Permit No:</p></td>
                                     <td><input type="text" name="tel_no" class="form-control" placeholder="Telephone Number" value="{{$clients->permit_no}}" required></td>
                                     @include('alerts.feedback', ['field' => 'old_password'])
                                 </div>
@@ -112,19 +112,19 @@
                         <div class="row">
                             <div>
                                 <div class="form-group{{ $errors->has('stock') ? ' has-danger' : '' }}">
-                                   <h1 style="color:blue;">County</h1>
+                                   <p style="color:blue;">County</p>
                                     <input type="text" name="county" id="home_area" class="form-control" value="{{$clients->county}}"readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">
-                                    <h1 style="color:blue;">SubCounty</h1>
+                                    <p style="color:blue;">SubCounty</p>
                                     <input type="text"  name="subcounty" id="home_area" class="form-control" value="{{$clients->subcounty}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">
-                                    <h1 style="color:blue;">Location</h1>
+                                    <p style="color:blue;">Location</p>
                                     <input type="text"  name="location" id="home_area" class="form-control" value="{{$clients->location}}" readonly>
                                 </div>
                             </div>
@@ -133,19 +133,19 @@
                         <div class="row">
                             <div>
                                 <div class="form-group{{ $errors->has('stock') ? ' has-danger' : '' }}">
-                                    <h1 style="color:blue;">Village</h1>
+                                    <p style="color:blue;">Village</p>
                                     <input type="text" name="village" id="home_area" class="form-control" value="{{$clients->village}}"readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">
-                                    <h1 style="color:blue;">Nearest Shopping Centre</h1>
+                                    <p style="color:blue;">Nearest Shopping Centre</p>
                                     <input type="text"  name="nearest_centre" class="form-control" value="{{$clients->nearest_centre}}" readonly>
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">
-                                    <h1 style="color:blue;">Nearest Police</h1>
+                                    <p style="color:blue;">Nearest Police</p>
                                     <input type="text"  name="nearest_police"  class="form-control" value="{{$clients->nearest_police}}" readonly>
                                 </div>
                             </div>
@@ -158,16 +158,28 @@
                            <h1 style="color:orangered;"> SIGNED__________________________   DATE__________________________________</h1>
                         </div>
                         <div class="myDiv">
-
                         <p style="color:red;">WITNESSES</p>
                         </div>
+                        <div>
+                            <table class="table table-striped">
+                                <tbody>
+                                <tr>
+                                    <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
+                                        <td><h2>Witness:</h2></td>
+                                        <td><input type="text" name="tel_no" class="form-control" placeholder="Telephone Number" value="{{$clients->witness }}" required></td>
+                                        @include('alerts.feedback', ['field' => 'old_password'])
+                                    </div>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <div class="row">
-                            <div class="col-4">
-                                 <div class="form-group">
-                                   <h1 style="color:blue;">Witness</h1>
-                                    <input type="text"  name="nearest_police"  class="form-control" value="{{$clients->witness}}" readonly>
-                                </div>
-                            </div>
+{{--                            <div class="col-4">--}}
+{{--                                 <div class="form-group">--}}
+{{--                                   <h1 style="color:blue;">Witness</h1>--}}
+{{--                                    <input type="text"  name="nearest_police"  class="form-control" value="{{$clients->witness}}" readonly>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                             <div class="col-4">
                                 <div class="form-group">
                                     <h1 style="color:blue;">Witness ID</h1>
@@ -177,7 +189,7 @@
                             <div class="col-4">
                                 <div class="form-group">
                                    <h1 style="color:blue;">Signature</h1></label>
-                                    <input type="text"  name="witness_id"  class="form-control" value="__________________" readonly>
+                                    <input type="text"  name="witness_id"  class="form-control" value="______________________________________________" readonly>
                                 </div>
                             </div>
 

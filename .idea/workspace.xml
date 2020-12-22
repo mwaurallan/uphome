@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4b181beb-0590-40d0-8c71-17ae16a4dd7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/clearance/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/clearance/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/clearance/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/clearance/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +206,7 @@
       <workItem from="1608338170250" duration="853000" />
       <workItem from="1608362874839" duration="591000" />
       <workItem from="1608364288270" duration="5789000" />
-      <workItem from="1608408977507" duration="34302000" />
+      <workItem from="1608408977507" duration="36610000" />
     </task>
     <servers />
   </component>
@@ -278,6 +277,11 @@
           <url>file://$PROJECT_DIR$/resources/views/clearance/create.blade.php</url>
           <line>52</line>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/clearance/show.blade.php</url>
+          <line>139</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
