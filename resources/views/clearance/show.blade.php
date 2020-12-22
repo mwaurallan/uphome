@@ -45,7 +45,7 @@
                                     <td><div class="form-group"><h1><input type="text" class="form-control" value=" {{$clients->name_of_deceased}}"></h1></div></td>
                                     <td><h2>Adm No:</h2></td>
                                     <td><div class="form-group">
-                                    <h1><input type="text" class="form-control" value=" {{$clients->id}}"></h1></div></td>
+                                    <h1><input type="text" class="form-control" value=" {{$clients->adm_no}}"></h1></div></td>
                                 </tr>
                                 </tbody>
                             </table>
