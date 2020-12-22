@@ -50,33 +50,60 @@
                                     <input type="text" name="permit_no"  class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name" value="{{$bills[0]->permit_no}}" required readonly>
                                     @include('alerts.feedback', ['field' => 'permit_no'])
                                 </div>
+{{--                                <div class="row">--}}
+{{--                                    <div>--}}
+{{--                                        <div class="form-group{{ $errors->has('stock') ? ' has-danger' : '' }}">--}}
+{{--                                            <label class="form-control-label" for="input-stock">County</label>--}}
+
+{{--                                            <select name="county"  class="form-select form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}"  required>--}}
+
+{{--                                                @foreach ($counties as $county)--}}
+
+{{--                                                    <option value="{{$county}}" selected>{{$county}}</option>--}}
+
+{{--                                                @endforeach--}}
+{{--                                            </select>--}}
+{{--                                            @include('alerts.feedback', ['field' => 'subcounty'])--}}
+{{--                                            <label class="form-control-label"for="input-name">County</label>--}}
+{{--                                            <input type="text" name="county"  class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name" value="{{$bills[0]->permit_no}}" required readonly>--}}
+{{--                                            @include('alerts.feedback', ['field' => 'permit_no'])--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col-4">--}}
+{{--                                        <div class="form-group{{ $errors->has('stock_defective') ? ' has-danger' : '' }}">--}}
+{{--                                            <label class="form-control-label" for="input-stock_defective">Subcounties</label>--}}
+{{--                                            <select name="subcounty" id="subcounty" class="form-select2 form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" required>--}}
+{{--                                                @foreach ($subcounties as $subcounty)--}}
+
+{{--                                                    <option value="{{$subcounty}}" selected>{{$subcounty}}</option>--}}
+
+{{--                                                @endforeach--}}
+{{--                                            </select>--}}
+{{--                                            @include('alerts.feedback', ['field' => 'stock_defective'])--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="col-4">--}}
+{{--                                        <div class="form-group{{ $errors->has('price') ? ' has-danger' : '' }}">--}}
+{{--                                            <label class="form-control-label" for="input-price">Location</label>--}}
+{{--                                            <input type="text"  name="location" class="form-control form-control-alternative" placeholder="Location" value="{{ old('home_area') }}" required autofocus >--}}
+{{--                                            @include('alerts.feedback', ['field' => 'home_area'])--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+
+{{--                                </div>--}}
                                 <div class="row">
                                     <div>
                                         <div class="form-group{{ $errors->has('stock') ? ' has-danger' : '' }}">
-                                            <label class="form-control-label" for="input-stock">County</label>
-
-                                            <select name="county"  class="form-select form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}"  required>
-
-                                                @foreach ($counties as $county)
-
-                                                    <option value="{{$county}}" selected>{{$county}}</option>
-
-                                                @endforeach
-                                            </select>
-                                            @include('alerts.feedback', ['field' => 'subcounty'])
+                                            <label class="form-control-label" for="input-price">County</label>
+                                            <input type="text"  name="county" class="form-control form-control-alternative" placeholder="County" value="{{ old('home_area') }}" required autofocus >
+                                            @include('alerts.feedback', ['field' => 'home_area'])
                                         </div>
                                     </div>
                                     <div class="col-4">
                                         <div class="form-group{{ $errors->has('stock_defective') ? ' has-danger' : '' }}">
-                                            <label class="form-control-label" for="input-stock_defective">Subcounties</label>
-                                            <select name="subcounty" id="subcounty" class="form-select2 form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" required>
-                                                @foreach ($subcounties as $subcounty)
-
-                                                    <option value="{{$subcounty}}" selected>{{$subcounty}}</option>
-
-                                                @endforeach
-                                            </select>
-                                            @include('alerts.feedback', ['field' => 'stock_defective'])
+                                            <label class="form-control-label" for="input-price">Subcounty</label>
+                                            <input type="text"  name="subcounty" class="form-control form-control-alternative" placeholder="Subcounty" value="{{ old('home_area') }}" required autofocus >
+                                            @include('alerts.feedback', ['field' => 'home_area'])
                                         </div>
                                     </div>
                                     <div class="col-4">

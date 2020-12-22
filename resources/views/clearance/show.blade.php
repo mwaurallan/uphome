@@ -41,11 +41,13 @@
                             <table class="table table-striped">
                                 <tbody>
                                 <tr>
-                                    <th scope="row"><h2>Deceased Name</h2></th>
-                                    <td><div class="form-group"><h1><input type="text" class="form-control" value=" {{$clients->name_of_deceased}}"></h1></div></td>
                                     <td><h2>Adm No:</h2></td>
                                     <td><div class="form-group">
                                     <h1><input type="text" class="form-control" value=" {{$clients->adm_no}}"></h1></div></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><h2>Deceased Name</h2></th>
+                                    <td><div class="form-group"><h1><input type="text" class="form-control" value=" {{$clients->name_of_deceased}}"></h1></div></td>
                                 </tr>
                                 </tbody>
                             </table>
