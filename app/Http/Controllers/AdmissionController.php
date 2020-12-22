@@ -141,14 +141,15 @@ class AdmissionController extends Controller
     public function update(Request $request, Admission $admission)
     {
         //
+//        dd($request);
      $id=$request->id;
 //        $url = $request->fullUrl();
 //        dd($id);
         $klijent = Admission::find($id);
 
         $klijent->update($request->all());
-        $permit = $request->get('permit_no');
-//        dd($permit);
+//        $permit = $request->get('permit_no');
+//        dd($permit);s
 
 //        $request->merge(['password' => Hash::make($request->get('password'))]);
 
