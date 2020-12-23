@@ -27,6 +27,12 @@
                     <p>Clearance</p>
                 </a>
             </li>
+            <li @if ($pageSlug == 'reports') class="active " @endif>
+                <a href="{{ route('report.index') }}">
+                    <i class="tim-icons icon-delivery-fast"></i>
+                    <p>All Receipts</p>
+                </a>
+            </li>
 
 {{--            <li @if ($pageSlug == 'methods') class="active " @endif>--}}
 {{--                <a href="{{ route('methods.index') }}">--}}

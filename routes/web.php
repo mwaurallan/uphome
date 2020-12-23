@@ -28,6 +28,7 @@ Route::group(['middleware' => 'auth'], function () {
         'clients' => 'ClientController',
         'payments'=>'Order2Controller',
         'pay'=>'PaymentController',
+        'report'=>'ReceiptController',
         'services'=>'BillController',
         'admission'=>'AdmissionController',
         'clearance'=>'ClearanceController',

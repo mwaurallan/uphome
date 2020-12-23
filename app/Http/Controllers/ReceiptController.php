@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Payment;
 use App\Receipt;
 use App\Provider;
 use App\Product;
@@ -9,6 +10,7 @@ use App\Product;
 use Carbon\Carbon;
 use App\ReceivedProduct;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ReceiptController extends Controller
 {
@@ -20,9 +22,15 @@ class ReceiptController extends Controller
      */
     public function index()
     {
-        $receipts = Receipt::paginate(25);
+//        $receipts =Payment::all();
+////        dd($receipts);
+        $bills =DB::table('payments')
+            ->join('admissions', 'admissions.id', '=', 'payments.customer_id')
+            ->select('payments.*', 'admissions.name','admissions.name_of_deceased')
+            ->orderBy('payments.id', 'asc')->get();
+//dd($bills);
 
-        return view('inventory.receipts.index', compact('receipts'));
+        return view('report.index', compact('bills'));
     }
 
     /**

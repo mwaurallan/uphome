@@ -103,9 +103,11 @@ class PaymentController extends Controller
     }
     public function receipt($id)
     {
+//        dd($id);
         $bills =DB::table('payments')
                   ->where('id',$id)->get();
       $client_id=$bills[0]->customer_id;
+//      dd($client_id);
       $order_id=$bills[0]->order_id;
         $clients=DB::table('admissions')->where('id',$client_id)->first();
         $pays=DB::table('bills')->where('id',$order_id)->first();
@@ -114,7 +116,7 @@ class PaymentController extends Controller
             ->select('bill__services.*', 'services.name')
             ->where('bill__services.order_id',$order_id)->get();
             $total=$orders->sum('quantity');
-//        dd($bills);
+//        dd($pays);
 
         return view('pay.receipt', compact('bills','clients','orders','pays','total'));
     }

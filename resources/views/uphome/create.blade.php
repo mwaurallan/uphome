@@ -35,17 +35,22 @@
                                     <input type="text" name="id_no" id="input-ID_NO" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="ID_NO" value="{{ old('name') }}" required autofocus>
                                     @include('alerts.feedback', ['field' => 'id_no'])
                                 </div>
-
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                                     <label class="form-control-label"for="input-name">Home_Area</label>
-                                    <select name="home_area" id="home_area" class="form-select form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Home_Area" required>
-                                        @foreach ($counties as $county)
-
-                                            <option value="{{$county}}" selected>{{$county}}</option>
-                                        @endforeach
-                                    </select>
-                                    @include('alerts.feedback', ['field' => 'home_area'])
+                                    <input type="text" name="home_area"  class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Home_area" value="{{ old('home_area') }}" required autofocus>
+                                    @include('alerts.feedback', ['field' => 'id_no'])
                                 </div>
+
+{{--                                <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">--}}
+{{--                                    <label class="form-control-label"for="input-name">Home_Area</label>--}}
+{{--                                    <select name="home_area" id="home_area" class="form-select form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Home_Area" required>--}}
+{{--                                        @foreach ($counties as $county)--}}
+
+{{--                                            <option value="{{$county}}" selected>{{$county}}</option>--}}
+{{--                                        @endforeach--}}
+{{--                                    </select>--}}
+{{--                                    @include('alerts.feedback', ['field' => 'home_area'])--}}
+{{--                                </div>--}}
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                                     <label class="form-control-label"for="input-name">Telephone_No</label>
                                     <input type="text" name="tel_no" id="input-Telephone_no" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Telephone_No" " required autofocus>
