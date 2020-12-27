@@ -21,11 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b181beb-0590-40d0-8c71-17ae16a4dd7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReceiptController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReceiptController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navbars/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/uphome/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/uphome/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/uphome/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/uphome/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +157,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/report" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Sacco" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -212,7 +208,7 @@
       <workItem from="1608362874839" duration="591000" />
       <workItem from="1608364288270" duration="5789000" />
       <workItem from="1608408977507" duration="37382000" />
-      <workItem from="1608664746440" duration="3927000" />
+      <workItem from="1608664746440" duration="6616000" />
     </task>
     <servers />
   </component>

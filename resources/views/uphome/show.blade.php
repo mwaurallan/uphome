@@ -163,12 +163,14 @@
                     <p style="color:red;">IMPORTANT INSTRUCTIONS</p>
                     </div>
                     <div class="form-group">
-                                <textarea  rows="3" cols="100" class="input2">
+                                <textarea  rows="5" cols="100" class="input2">
                                     1-ALL PAYMENTS,BRINGING OF CLEAN CLOTHES,COFFIN AND ORIGINAL BURIAL PERMIT
                                     TO BE PRESENTED A DAY BEFORE THE COLLECTION DAY BETWEEN MON - FRI by 4PM.
+                                    NOTE:ON SUNDAYS CASHIERS OFFICE REMAIN CLOSED,KINDLY CLEAR WITH THE OFFICE ON
+                                    SATURDAYS BETWEEN 7AM to 1PM.
                                 </textarea>
-                        <div>
-                            <p>Note:On Sundays cashiers office remains closed,Kindly clear with the office on saturdays between 7am to 1pm</p>
+                        <div align="center" class="myDiv2">
+                            <p style="color:red;">NOTE:ANY LATE PAYMENT WILL INCUR A FINE OF 1000KSH</p>
                         </div>
                     </div>
                     <div class="myDiv3">
