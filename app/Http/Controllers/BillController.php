@@ -56,7 +56,21 @@ class BillController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request);
+
+        $admins=DB::table('bills')->where('customer_email',$request->customer_name)->get();
+
+        if($admins->isNotEmpty())
+        {
+//do something
+//            dd($admins);
+            if
+
+            ($bill_balance=$admins[0]->bill_balance>0)
+            {
+                return redirect()->route('services.index')->withStatus('There is an existing bill with balance.');
+            }
+
+        }
         $id=$request->customer_name;
         $client = DB::table('admissions')->where('id', $id)->first();
        $name=$client->name;

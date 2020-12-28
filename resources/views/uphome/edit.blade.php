@@ -26,7 +26,12 @@
                                 @include('alerts.feedback', ['field' => 'name'])
                             </div>
                         <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                            <label>Name(Next Of Kin)s</label>
+                            <label>Name Of Deceased</label>
+                            <input type="text" name="name_of_deceased" class="form-control" value="{{$admin->name_of_deceased}}">
+                            @include('alerts.feedback', ['field' => 'name'])
+                        </div>
+                        <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
+                            <label>Name(Next Of Kin</label>
                             <input type="text" name="name" class="form-control" value="{{$admin->name}}">
                             @include('alerts.feedback', ['field' => 'name'])
                         </div>
