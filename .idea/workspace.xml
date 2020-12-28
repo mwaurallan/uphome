@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b181beb-0590-40d0-8c71-17ae16a4dd7e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BillController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BillController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdmissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdmissionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/uphome/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/uphome/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/uphome/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/uphome/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +210,7 @@
       <workItem from="1608362874839" duration="591000" />
       <workItem from="1608364288270" duration="5789000" />
       <workItem from="1608408977507" duration="37382000" />
-      <workItem from="1608664746440" duration="15772000" />
+      <workItem from="1608664746440" duration="16961000" />
     </task>
     <servers />
   </component>

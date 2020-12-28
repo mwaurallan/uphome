@@ -51,6 +51,11 @@
                             @include('alerts.feedback', ['field' => 'name'])
                         </div>
                         <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
+                            <label>Telephone2</label>
+                            <input type="text" name="tel_no2" class="form-control" value="{{$admin->tel_no2}}">
+                            @include('alerts.feedback', ['field' => 'name'])
+                        </div>
+                        <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                             <label>Realatioship</label>
                             <input type="text" name="relationship" class="form-control" value="{{$admin->relationship}}">
                             @include('alerts.feedback', ['field' => 'name'])

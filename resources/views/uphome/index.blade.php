@@ -22,7 +22,7 @@
                             <thead class=" text-primary">
                             <tr>
 
-
+                                <th>AdmNo</th>
                                 <th>Name</th>
                                 <th>Name of Deceased</th>
                                 <th>ID NO</th>
@@ -38,6 +38,7 @@
                                @foreach ($clients as $client)
 
                                     <tr>
+                                        <td>{{ $client->id}}</td>
                                         <td>{{ $client->name }}</td>
                                         <td>{{$client->name_of_deceased}}</td>
                                         <td>{{ $client->id_no }}</td>

@@ -22,7 +22,7 @@ class AdmissionController extends Controller
         $clients = Admission::all();
      //   $clients= DB::table('admissions');
       //$clients=  DB::table('admisions');
-       // dd($clients);
+//        dd($clients);
 
         //dd($clients);
       //  return view('games', [
