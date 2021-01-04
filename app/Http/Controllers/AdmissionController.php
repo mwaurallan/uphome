@@ -20,6 +20,7 @@ class AdmissionController extends Controller
     public function index()
     {
         $clients = Admission::all();
+        $client=2;
      //   $clients= DB::table('admissions');
       //$clients=  DB::table('admisions');
 //        dd($clients);
@@ -33,7 +34,7 @@ class AdmissionController extends Controller
 
         //dd($cars);
 
-        return view('uphome.index', compact('clients'));
+        return view('uphome.index', compact('clients','client'));
     }
 
     /**
@@ -114,6 +115,16 @@ class AdmissionController extends Controller
 
 //     dd($admins);
         return view('uphome.show', compact('admins'));
+    }
+    public function print2()
+    {
+        //
+//        $id=2;
+//        dd($id);
+//        $admins=DB::table('admissions')->where('id',$id)->first();
+
+//     dd($admins);
+        return view('uphome.show2');
     }
 
     /**

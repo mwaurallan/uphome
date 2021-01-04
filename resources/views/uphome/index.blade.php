@@ -9,9 +9,15 @@
                         <div class="col-8">
                             <h4 class="card-title">Clients</h4>
                         </div>
-                        <div class="col-4 text-right">
+                        <div class="col-8 text-right">
+{{--                            <a href="{{ route('admission.print2') }}" class="btn btn-sm btn-primary">Form</a>--}}
+{{--                            <a href="{{ route('admission.print2'}}"  class="btn btn-sm btn-primary">Form</a>--}}
+                            <a href="{{ url('print7') }}" class="btn btn-sm btn-primary">PrintForm</a>
                             <a href="{{ route('admission.create') }}" class="btn btn-sm btn-primary">New Admission</a>
                         </div>
+{{--                        <div class="col-4 text-center">--}}
+{{--                            <a href="{{ route('admission.create') }}" class="btn btn-sm btn-primary">New Admission</a>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
                 <div class="card-body">

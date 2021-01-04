@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b181beb-0590-40d0-8c71-17ae16a4dd7e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a148da9-4670-44bd-be07-674738b71f1f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0a148da9-4670-44bd-be07-674738b71f1f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Bill.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bill.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdmissionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdmissionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BillController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BillController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/payments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/payments/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/uphome/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/uphome/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +160,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Sacco" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/uphome" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -170,8 +169,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\uphome\resources\views\report" />
       <recent name="C:\xampp\htdocs\uphome\resources\views\uphome" />
+      <recent name="C:\xampp\htdocs\uphome\resources\views\report" />
       <recent name="C:\xampp\htdocs\uphome\resources\views\clearance" />
       <recent name="C:\xampp\htdocs\uphome\resources\views\pay" />
       <recent name="C:\xampp\htdocs\uphome\resources\views\payments" />
@@ -212,7 +211,7 @@
       <workItem from="1608362874839" duration="591000" />
       <workItem from="1608364288270" duration="5789000" />
       <workItem from="1608408977507" duration="37382000" />
-      <workItem from="1608664746440" duration="44379000" />
+      <workItem from="1608664746440" duration="48486000" />
     </task>
     <servers />
   </component>
@@ -236,7 +235,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AdmissionController.php</url>
-          <line>115</line>
+          <line>116</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">

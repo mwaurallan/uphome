@@ -22,6 +22,7 @@ class BillController extends Controller
     public function index()
     {
         //
+        $client=0;
         $products = Service::all();
         $clients = Admission::all();
         $bills = Bill::all();
@@ -32,7 +33,7 @@ class BillController extends Controller
 
 //        dd($bills);
 
-        return view('payments.index', compact('products', 'bills'));
+        return view('payments.index', compact('products', 'bills','client'));
     }
 
     /**
