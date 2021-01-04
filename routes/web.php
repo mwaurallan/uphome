@@ -73,6 +73,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
     Route::get('admin/{id}', ['as' => 'admin.edit', 'uses' => 'AdmissionController@edit']);
+    Route::get('admin2/{id}', ['as' => 'admin2.delete', 'uses' => 'BillController@destroy']);
 
     Route::match(['put', 'patch'], 'profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
     Route::match(['put', 'patch'], 'admin', ['as' => 'admin.update', 'uses' => 'AdmissionController@update']);

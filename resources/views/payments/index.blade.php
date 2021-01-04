@@ -33,7 +33,7 @@
                                 <th></th>
                                 <th></th>
                                 <th>Actions</th>
-                                <th></th>
+                                <th>Delete Bill</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -56,8 +56,16 @@
                                                 <i class="tim-icons icon-bank"></i>
                                             </a>
                                         </td>
-                                        <td class="td-actions text-right">
-
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="tim-icons icon-settings-gear-63"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+{{--                                                    <a class="dropdown-item" href="{{ route('admin2.delete',$bill->id) }}"><p>{{ __('Delete') }}</p></a>--}}
+                                                    <a class="dropdown-item"  onclick="return myFunction();" href="{{route('admin2.delete', $bill->id)}}"><p>{{ __('Delete') }}</p></a>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -80,5 +88,11 @@
     $(document).ready( function () {
         $('#myTable').DataTable();
     } );
+</script>
+<script>
+    function myFunction() {
+        if(!confirm("Are You Sure to delete this Bill"))
+            event.preventDefault();
+    }
 </script>
 @endpush
