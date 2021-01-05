@@ -151,6 +151,11 @@ class ClearanceController extends Controller
 //     dd($clients->name_of_deceased);
         return view('clearance.show', compact('clients'));
     }
+    public function print6()
+    {
+
+        return view('clearance.show2');
+    }
 
     /**
      * Show the form for editing the specified resource.

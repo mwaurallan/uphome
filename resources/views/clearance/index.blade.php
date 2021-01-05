@@ -10,9 +10,9 @@
                             <h4 class="card-title">Clients</h4>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="{{ route('admission.create') }}" class="btn btn-sm btn-primary">New Admission</a>
+                            <a href="{{ url('print8')}}" class="btn btn-sm btn-primary">Clearance Form</a>
                         </div>
-                    </div>
+                    </div
                 </div>
                 <div class="card-body">
                     @include('alerts.success')
