@@ -75,7 +75,7 @@
                             <tbody>
                             <tr>
                                 <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
-                                    <td><p>ID Number:</p></td>
+                                    <td><p>ID Number  :</p></td>
                                     <td><input type="text" name="tel_no" class="form-control" placeholder="" value="" required></td>
                                     @include('alerts.feedback', ['field' => 'old_password'])
                                 </div>
@@ -97,7 +97,7 @@
                             <tbody>
                             <tr>
                                 <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
-                                    <td><p>Permit No:</p></td>
+                                    <td><p>Permit   No     :</p></td>
                                     <td><input type="text" name="tel_no" class="form-control" placeholder="" value="" required></td>
                                     @include('alerts.feedback', ['field' => 'old_password'])
                                 </div>
