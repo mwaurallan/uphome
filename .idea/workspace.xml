@@ -20,12 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b181beb-0590-40d0-8c71-17ae16a4dd7e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/23c72385-4081-49a3-9b7b-a066597dec18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/23c72385-4081-49a3-9b7b-a066597dec18/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/aa6c0e85-2f6d-469c-87bf-a6ce037a3d4e.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/aa6c0e85-2f6d-469c-87bf-a6ce037a3d4e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/clearance/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/clearance/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/clearance/show2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/clearance/show2.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +209,7 @@
       <workItem from="1608364288270" duration="5789000" />
       <workItem from="1608408977507" duration="37382000" />
       <workItem from="1608664746440" duration="52374000" />
-      <workItem from="1609938646834" duration="1526000" />
+      <workItem from="1609938646834" duration="2355000" />
     </task>
     <servers />
   </component>
