@@ -7,17 +7,35 @@
 
             <div class="card  center" style="width:60rem;">
                 <div class="card-header">
-                    <div class="center2">
-                        <p>UPHOME FUNERAL HOME</p>
-                        <p>Admission Form</p>
-                        <P>Tel:0798439434934</P>
-                        <p>Email:info@uphome.com</p>
+                    <div class="row no-gutters">
+                        <div class="col-auto">
+                            <img src="{{ asset('assets/img/logo10.jpeg') }}" width="300" height="300" class="img-fluid" alt="Uphome Logo">
+                        </div>
+                        <div class="col">
+                            <div class="card-block px-6" align="center">
+                                <p class="card-text">UPHOME FUNERAL HOME</p>
+                            </div>
+                            <div align="center">
+                                Email:uuphome44@gmail.com
+                                <div>
+                                    Tel:0721875392/0729544203
+                                </div>
+                                <div>
+                                    Website:www.uphomefuneral.com
+                                </div>
+                                <div>
+                                    Along Nairobi-Nakuru Highway
+                                </div>
+                                <div class="myDiv2">
+                                    <h1>Official Receipt</h1>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
 
 
-                    <div class="card-body">
+                <div class="card-body">
                     <div>
                 <table class="table">
                     <th>Client</th>
