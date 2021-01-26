@@ -126,6 +126,8 @@
                                 <td><input type="text" name="tel_no" class="form-control" size="60"  value="{{$admins->permit_no}}" required></td>
                                 <td><label><p>Relationship:</p></label></td>
                                 <td><input type="text" name="tel_no" class="form-control" size="60"  value="{{$admins->relationship}}" required></td>
+                                <td><label><p>Home_Area:</p></label></td>
+                                <td><input type="text" name="tel_no" class="form-control" size="60"  value="{{$admins->home_area}}" required></td>
                                 @include('alerts.feedback', ['field' => 'old_password'])
                             </div>
                         </tr>

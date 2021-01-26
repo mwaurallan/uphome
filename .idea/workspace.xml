@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b181beb-0590-40d0-8c71-17ae16a4dd7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/report/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/report/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/uphome/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/uphome/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +157,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/clearance" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -209,7 +209,10 @@
       <workItem from="1608364288270" duration="5789000" />
       <workItem from="1608408977507" duration="37382000" />
       <workItem from="1608664746440" duration="52374000" />
-      <workItem from="1609938646834" duration="3583000" />
+      <workItem from="1609938646834" duration="12494000" />
+      <workItem from="1610957721063" duration="769000" />
+      <workItem from="1611297087631" duration="2832000" />
+      <workItem from="1611642704644" duration="1298000" />
     </task>
     <servers />
   </component>
