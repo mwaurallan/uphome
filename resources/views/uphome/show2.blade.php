@@ -113,6 +113,8 @@
                             <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
                                 <td><label><p>Date:</p></label></td>
                                 <td><input type="text" class="form-control" size="30"  value="" required></td>
+                                <td><label><p>Relationship:</p></label></td>
+                                <td><input type="text" name="tel_no" class="form-control" size="60"  value="" required></td>
                                 @include('alerts.feedback', ['field' => 'old_password'])
                             </div>
                         </tr>
@@ -124,7 +126,7 @@
                             <div class="form-group{{ $errors->has('old_password') ? ' has-danger' : '' }}">
                                 <td><label><p>Permit No:</p></label></td>
                                 <td><input type="text" name="tel_no" class="form-control" size="60"  value="" required></td>
-                                <td><label><p>Relationship:</p></label></td>
+                                <td><label><p>Home_Area:</p></label></td>
                                 <td><input type="text" name="tel_no" class="form-control" size="60"  value="" required></td>
                                 @include('alerts.feedback', ['field' => 'old_password'])
                             </div>
