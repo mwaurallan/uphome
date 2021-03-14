@@ -23,7 +23,10 @@ class MethodController extends Controller
 //            'methods' => PaymentMethod::paginate(15),
 //            'month' => Carbon::now()->month
 //        ]);
-        $services=Service::all();
+        $services=Service::all()->sortByDesc('id');
+        // dd($services);
+
+        // Category::all()->sortByDesc("created_at");
 //        dd($services);
         return view('methods.create',compact('services'));
     }
@@ -47,7 +50,19 @@ class MethodController extends Controller
      */
     public function store(Request $request)
 {
-//dd($request->date2);
+
+if($request->service==11){
+
+    $orders =DB::table('payments')
+        ->join('bills', 'bills.id', '=', 'payments.order_id')
+        ->join('bill__services','bill__services.order_id','=','bills.id')
+        ->join('services','services.id','=','bill__services.product_id')
+        ->select('payments.payment_date','payments.amount_paid', 'bills.customer_name','bill__services.product_id','services.name')
+        ->whereBetween('payment_date',[$request->date1,$request->date2])->get();
+        $total=$orders->sum('amount_paid');
+
+}else{
+
 
     $orders =DB::table('payments')
         ->join('bills', 'bills.id', '=', 'payments.order_id')
@@ -58,6 +73,8 @@ class MethodController extends Controller
         ->whereBetween('payment_date',[$request->date1,$request->date2])->get();
 
         $total=$orders->sum('amount_paid');
+    }
+        // dd($total);
 
 //dd($total);
 
