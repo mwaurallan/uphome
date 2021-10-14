@@ -43,7 +43,7 @@
                             <tbody>
                             <tr>
                                 <th scope="row"><h1>Adm_No</h1></th>
-                                <td><div class="form-group"><h1><input type="text" class="form-control" value=" {{$admins->id}}"></h1></div></td>
+                                <td><div class="form-group"><h1><input type="text" class="form-control" value=" {{$admins->adm_no}}"></h1></div></td>
 {{--                                <td><h1>Name_Of_Deceased</h1></td>--}}
 {{--                                <td><div class="form-group">--}}
 {{--                                <h1><input type="text" class="form-control" value=" {{$admins->name_of_deceased}}"></h1></div></td>--}}

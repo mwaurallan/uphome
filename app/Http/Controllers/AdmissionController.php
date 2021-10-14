@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use PhpParser\Node\Stmt\Else_;
 use Symfony\Component\Console\Input\Input;
 
 class AdmissionController extends Controller
@@ -19,7 +20,8 @@ class AdmissionController extends Controller
      */
     public function index()
     {
-        $clients = Admission::all();
+        // $clients = Admission::all();
+        $clients = Admission::orderBy('id', 'desc')->get();
         $client=2;
      //   $clients= DB::table('admissions');
       //$clients=  DB::table('admisions');
@@ -64,14 +66,33 @@ class AdmissionController extends Controller
     public function store(Request $request)
     {
         //
-//        dd($request);
+    //    dd($request);
         $curr_date=$request->date_admitted;
         $curr_date=Carbon::now();
 
-//
+
 //        dd($cur_date);
         $admit = new Admission();
        $user=Auth::user()->name;
+    //    $order->user_id = Auth()->id();
+        //  $latestadm= App\Admission::orderBy('created_at','DESC')->first();
+        $admno=1;
+        $latestadm=Admission::orderBy('created_at','DESC')->first();
+        $lstno= $latestadm->adm_no;
+        $date2=Carbon::now()->format('Y');
+
+        if (is_null($lstno)) {
+            $admno=$admno . '_' .$date2;
+      
+        }else{
+            $admno = explode("_", $lstno);
+            // dd($admno[0]);
+            $admno=$admno[0]+1 . '_' . $date2;
+            // dd($admno);
+            // $oldlat . ' ' . $oldlong;
+            // $admno=$date2;
+
+        }
 
 
         $admit->name_of_deceased = $request->name_of_deceased;
@@ -85,6 +106,7 @@ class AdmissionController extends Controller
         $admit->relationship = $request->relationship;
         $admit->tel_no2=$request->tel_no2;
         $admit->user_name=$user;
+        $admit->adm_no=$admno;
         $admit->save();
         return redirect()
             ->route('admission.index')
@@ -103,7 +125,7 @@ class AdmissionController extends Controller
      //$clients=$admission->get();
        // $user = DB::table('users')->where('name', 'John')->first();
         $admins=DB::table('admissions')->where('id',$admission->id)->first();
-//     dd($admins->id);
+    // dd($admins->adm_no);
         return view('uphome.show', compact('admins'));
 
     }

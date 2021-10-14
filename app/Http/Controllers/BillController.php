@@ -68,7 +68,8 @@ class BillController extends Controller
 //            dd($admins);
             if
 
-            ($bill_balance = $admins[0]->bill_balance > 0) {
+            ($bill_balance = $admins[0]->bill_balance > 0)
+             {
                 return redirect()->route('services.index')->withStatus('There is an existing bill with balance.');
             }
 

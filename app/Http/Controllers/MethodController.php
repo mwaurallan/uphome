@@ -71,6 +71,7 @@ if($request->service==11){
         ->select('payments.payment_date','payments.amount_paid', 'bills.customer_name','bill__services.product_id','services.name')
         ->where('services.id',$request->service)
         ->whereBetween('payment_date',[$request->date1,$request->date2])->get();
+        // dd($orders);
 
         $total=$orders->sum('amount_paid');
     }

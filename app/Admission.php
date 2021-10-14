@@ -17,6 +17,7 @@ class Admission extends Model
         'permit_no',
         'relationship',
         'tel_no2',
+        'adm-no',
     ];
     public function payments()
     {

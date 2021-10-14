@@ -60,6 +60,7 @@ class ClearanceController extends Controller
 
         $bills =DB::table('admissions')
             ->where('admissions.id',$id)->get();
+            // dd($bills);
 
         $results = Payment::latest('id')
             ->where('customer_id','=',$id)->first();
