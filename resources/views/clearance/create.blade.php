@@ -27,7 +27,9 @@
                                 </div>
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-name">Admission Number</label>
-                                    <input type="text" name="adm_no"  class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name" value="{{$bills[0]->adm_no}}" required>
+                                    <input type="text" name="adm_no"  class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="Name" value="{{$bills[0]->adm_no ?: $bills[0]->id}}" required readonly>
+                                    {{--  {{ $material_details ?: 'default value' }}  --}}
+                                    {{--  {{ $errors->has('id_no') ? ' is-invalid' : '' }}                                                                             --}}
                                     @include('alerts.feedback', ['field' => 'adm_no'])
                                 </div>
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
