@@ -43,7 +43,7 @@
                                 <tr>
                                     <td><p>Adm No:</p></td>
                                     <td><div class="form-group">
-                                    <p><input type="text" class="form-control" value=" {{$clients->adm_no}}"></p></div></td>
+                                    {{--  <p><input type="text" class="form-control" value=" {{$clients->adm_no}}"></p></div></td>  --}}
                                 </tr>
                                 <tr>
                                     <th scope="row"><p>Deceased Name</p></th>

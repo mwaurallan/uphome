@@ -86,7 +86,8 @@ class ClearanceController extends Controller
     public function store(Request $request)
     {
 
-//        dd($request);
+        // dd($request);
+        // dd($request->adm_no2);
         $user = Clearance::where('adm_no', '=',$request->adm_no)->first();
         if ($user === null) {
             $curr_date=$request->release_date;
@@ -112,6 +113,7 @@ class ClearanceController extends Controller
             $admit-> release_officer= $request->release_officer;
             $admit-> release_date=  $curr_date;
             $admit->rct_no=$request->rct_no;
+            $admit->adm_no2=$request->adm_no2;
             $admit->save();
             return redirect()
                 ->route('clearance.index')
