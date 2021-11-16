@@ -28,7 +28,8 @@
                             <thead class=" text-primary">
                             <tr>
 
-                                <th>AdmNo</th>
+                                <th>No</th>
+                                <th>Admno</th>
                                 <th>Name</th>
                                 <th>Name of Deceased</th>
                                 <th>ID NO</th>
@@ -45,6 +46,7 @@
 
                                     <tr>
                                         <td>{{ $client->id}}</td>
+                                        <td>{{ $client->adm_no}}</td>
                                         <td>{{ $client->name }}</td>
                                         <td>{{$client->name_of_deceased}}</td>
                                         <td>{{ $client->id_no }}</td>

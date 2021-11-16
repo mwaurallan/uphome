@@ -79,7 +79,9 @@ class AdmissionController extends Controller
         $admno=1;
         $latestadm=Admission::orderBy('created_at','DESC')->first();
         $lstno= $latestadm->adm_no;
-        $date2=Carbon::now()->format('Y');
+        // $date2=Carbon::now()->format('Y');
+        $date2 = Carbon::now()->format('y');
+        // dd($date2);
 
         if (is_null($lstno)) {
             $admno=$admno . '_' .$date2;
