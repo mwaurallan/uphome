@@ -110,6 +110,7 @@ class PaymentController extends Controller
 //      dd($client_id);
       $order_id=$bills[0]->order_id;
         $clients=DB::table('admissions')->where('id',$client_id)->first();
+        // dd($clients);
         $pays=DB::table('bills')->where('id',$order_id)->first();
         $orders =DB::table('bill__services')
             ->join('services', 'services.id', '=', 'bill__services.product_id')

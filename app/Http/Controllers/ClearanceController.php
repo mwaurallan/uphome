@@ -89,6 +89,7 @@ class ClearanceController extends Controller
         // dd($request);
         // dd($request->adm_no2);
         $user = Clearance::where('adm_no', '=',$request->adm_no)->first();
+        // dd($request->adm_no);
         if ($user === null) {
             $curr_date=$request->release_date;
             $curr_date=Carbon::now();
@@ -149,6 +150,7 @@ class ClearanceController extends Controller
         //$admins=DB::table('bills')->where('id',$id)->first();
 
         $clients=DB::table('clearances')->where('id',$id)->first();
+        // dd($clients);
 //        dd($clients);
 
 //     dd($clients->name_of_deceased);

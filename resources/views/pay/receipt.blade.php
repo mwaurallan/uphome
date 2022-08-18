@@ -44,7 +44,7 @@
                    </table>
                    <table class="table" id="products_table">
                        <thead style="background-color:magenta">
-                       <td><h1>Received From:{{$clients->name}}</h1> </td><td><h1>Name Of Deceased:{{$clients->name_of_deceased}}::</h1></td>
+                       <td><h1>Received From:{{$clients->name}}</h1> </td><td><h1>Name Of Deceased:{{$clients->name_of_deceased}}::</td><td></h1><h1>AdmNo.{{$clients->adm_no}}::</h1></td>
                        <thead> <td><h1>Bill_Total --{{number_format($pays->bill_total,0)}}</h1></td><td><h1>Amount_Paid->{{number_format($bills[0]->amount_paid,0)}} </h1></td></thead>
 
                       ----
