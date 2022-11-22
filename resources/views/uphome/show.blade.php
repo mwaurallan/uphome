@@ -169,15 +169,18 @@
                                     1-ALL PAYMENTS,BRINGING OF CLEAN CLOTHES,COFFIN AND ORIGINAL BURIAL PERMIT
                                     TO BE PRESENTED A DAY BEFORE THE COLLECTION DAY BETWEEN MON - FRI by 4PM.
                                     NOTE:ON SUNDAYS CASHIERS OFFICE REMAIN CLOSED,KINDLY CLEAR WITH THE OFFICE ON
-                                    SATURDAYS BETWEEN 7AM to 1PM.
+                                    SATURDAYS BETWEEN 7AM to 1PM .
                                 </textarea>
                         <div align="center" class="myDiv2">
                             <p style="color:red;">NOTE:ANY LATE PAYMENT WILL INCUR A FINE OF 1000KSH</p>
                         </div>
                     </div>
-                    <div class="myDiv3">
-                    <P>I have read and understood all the terms and conditions and agreed to abide
-                        by them Sign______________________________________</P>
+                    <div class="myDiv2">
+                    <p style="color:blue;">I have read and understood all the terms and conditions and agreed to abide
+
+                        by them:
+
+                         Sign______________________________________</p>
                     </div>
                 </div>
 
