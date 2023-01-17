@@ -4,7 +4,6 @@
 
     <div id="body">
 
-
         <div class="card  center" style="width:60rem;">
             <div class="card-header">
                 <div class="row no-gutters">
@@ -29,14 +28,11 @@
                             <div class="myDiv2">
                                 <h1>Admission Form</h1>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </div>
             <form method="post" action="" autocomplete="off">
-
                 <div class="card-body">
                     <div class="myDiv">
                         <table class="table table-striped">
@@ -167,7 +163,7 @@
                     <div class="form-group">
                                 <textarea  rows="5" cols="100" class="input2">
                                     1-ALL PAYMENTS,BRINGING OF CLEAN CLOTHES,COFFIN AND ORIGINAL BURIAL PERMIT
-                                    TO BE PRESENTED A DAY BEFORE THE COLLECTION DAY BETWEEN MON - FRI by 4PM.
+                                    TO BE PRESENTED A DAY BEFORE THE COLLECTION DAY BETWEEN MON-FRI by 4PM.
                                     NOTE:ON SUNDAYS CASHIERS OFFICE REMAIN CLOSED,KINDLY CLEAR WITH THE OFFICE ON
                                     SATURDAYS BETWEEN 7AM to 1PM .
                                 </textarea>

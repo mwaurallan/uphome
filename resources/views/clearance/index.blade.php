@@ -43,7 +43,7 @@
                                         <td>{{ $client->id_no }}</td>
                                         <td> {{ $client->permit_no}}</td>
                                         <td>{{$client->permit_no }}</td>
-                                        <td>{{$client->release_date}}</td>
+                                 p       <td>{{$client->release_date}}</td>
                                         <td>
                                         <a href="{{ url('print5/'.$client->id) }}" class="btn btn-link" data-toggle="tooltip" data-placement="bottom" title="More Details">
                                             <i class="tim-icons icon-zoom-split"></i>
